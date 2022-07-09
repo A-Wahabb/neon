@@ -21,6 +21,8 @@ import iconpower from '../src/Assets/Imgs/iconpower.png'
 import iconstrong from '../src/Assets/Imgs/iconstrong.png'
 import facebookLogo from '../src/Assets/Imgs/facebook-logo.png'
 import instagramLogo from '../src/Assets/Imgs/instagram-logo.png'
+import PowerAdapt from './atom/PowerAdapt';
+import AcrylicBackground from './atom/AcrylicBackground';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
   const [ShowShadow, setShowShadow] = useState(true)
   const [slctdSize, setslctdSize] = useState('Small')
   const [Place, setPlace] = useState('Indoor')
+  const [Adptr, setAdptr] = useState('')
+  const [AcrylicBkgrnd, setAcrylicBkgrnd] = useState('')
   const [FontList, setFontList] = useState([
     'Alexa',
     'Barcelona',
@@ -146,173 +150,183 @@ function App() {
                     </label>
                   </li>
                 </ul>
-                {Selction === 'TEXT' && <>
-                  <div className="px-3 mt-3">
-                    <textarea
-                      className='inputText w-100 py-3'
-                      placeholder='ENTER TEXT HERE &#10;Press Enter/Return for a new line'
-                      name='UserInput'
-                      onChange={(e) => setUserInput(e.target.value)} />
+                <div className="px-3">
+                  {Selction === 'TEXT' && <>
+                    <div className="mt-3">
+                      <textarea
+                        className='inputText w-100 py-3'
+                        placeholder='ENTER TEXT HERE &#10;Press Enter/Return for a new line'
+                        name='UserInput'
+                        onChange={(e) => setUserInput(e.target.value)} />
 
-                  </div>
+                    </div>
 
-                </>}
-                {Selction === 'FONT' && <>
-                  <p className="tc-grey fw-600 text-center fs14">CHOOSE FONT</p>
+                  </>}
+                  {Selction === 'FONT' && <>
+                    <p className="tc-grey fw-600 text-center fs14">CHOOSE FONT</p>
 
-                  <div className="row w-100 mx-auto g-2 FontsCollection">
-                    {FontList.map(each => (
+                    <div className="row w-100 mx-auto g-2 FontsCollection">
+                      {FontList.map(each => (
 
-                      <FontSlction
-                        FontFamily={FontFamily}
-                        name={each}
-                        setFontFamily={setFontFamily} />
-                    ))}
-                  </div>
-                </>
-                }
+                        <FontSlction
+                          FontFamily={FontFamily}
+                          name={each}
+                          setFontFamily={setFontFamily} />
+                      ))}
+                    </div>
+                  </>
+                  }
 
-                {Selction === 'COLOR' && <>
-                  <div className="d-flex flex-wrap " >
-                    <ColorSlction
-                      name='Warm White'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color10'} />
+                  {Selction === 'COLOR' && <>
+                    <div className="d-flex flex-wrap " >
+                      <ColorSlction
+                        name='Warm White'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color10'} />
 
-                    <ColorSlction
-                      name='White'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color20'} />
+                      <ColorSlction
+                        name='White'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color20'} />
 
-                    <ColorSlction
-                      name='Lemon Yellow'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color30'} />
+                      <ColorSlction
+                        name='Lemon Yellow'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color30'} />
 
-                    <ColorSlction
-                      name='Golden Yellow'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color40'} />
+                      <ColorSlction
+                        name='Golden Yellow'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color40'} />
 
-                    <ColorSlction
-                      name='Orange'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color50'} />
+                      <ColorSlction
+                        name='Orange'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color50'} />
 
-                    <ColorSlction
-                      name='Light Red'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color60'} />
+                      <ColorSlction
+                        name='Light Red'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color60'} />
 
-                    <ColorSlction
-                      name='Red'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color70'} />
+                      <ColorSlction
+                        name='Red'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color70'} />
 
-                    <ColorSlction
-                      name='Pink'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color80'} />
+                      <ColorSlction
+                        name='Pink'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color80'} />
 
-                    <ColorSlction
-                      name='Cotton Candy'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color90'} />
+                      <ColorSlction
+                        name='Cotton Candy'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color90'} />
 
-                    <ColorSlction
-                      name='Deep Pink'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color100'} />
+                      <ColorSlction
+                        name='Deep Pink'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color100'} />
 
-                    <ColorSlction
-                      name='Purple'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color110'} />
+                      <ColorSlction
+                        name='Purple'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color110'} />
 
-                    <ColorSlction
-                      name='Deep Blue'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color120'} />
+                      <ColorSlction
+                        name='Deep Blue'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color120'} />
 
-                    <ColorSlction
-                      name='Electric Blue'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color130'} />
+                      <ColorSlction
+                        name='Electric Blue'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color130'} />
 
-                    <ColorSlction
-                      name='Ice Blue'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color140'} />
+                      <ColorSlction
+                        name='Ice Blue'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color140'} />
 
-                    <ColorSlction
-                      name='Tropical Blue'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color150'} />
+                      <ColorSlction
+                        name='Tropical Blue'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color150'} />
 
-                    <ColorSlction
-                      name='Mint'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color160'} />
+                      <ColorSlction
+                        name='Mint'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color160'} />
 
-                    <ColorSlction
-                      name='Green'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color170'} />
+                      <ColorSlction
+                        name='Green'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color170'} />
 
-                    <ColorSlction
-                      name='Deep Green'
-                      Color={Color}
-                      setColor={setColor}
-                      Code={'color180'} />
+                      <ColorSlction
+                        name='Deep Green'
+                        Color={Color}
+                        setColor={setColor}
+                        Code={'color180'} />
 
 
-                  </div>
-                </>}
+                    </div>
+                  </>}
 
-                <Options
-                  slctdSize={slctdSize}
-                  setslctdSize={setslctdSize}
-                />
+                  <Options
+                    slctdSize={slctdSize}
+                    setslctdSize={setslctdSize}
+                  />
 
-                <div className="row p-3 m-auto">
-                  <div className="col-sm-6 p-2">
+                  <div className="row py-3 m-auto">
+                    <div className="col-sm-6 p-2">
 
-                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'Indoor' && 'active'} `} onClick={() => { setPlace('Indoor') }}>
-                      <div>
-                        <p className="text-center fw-600 fs18 text-black mb-0">Indoor</p>
+                      <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'Indoor' && 'active'} `} onClick={() => { setPlace('Indoor') }}>
+                        <div>
+                          <p className="text-center fw-600 fs18 text-black mb-0">Indoor</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-sm-6 p-2">
+                    <div className="col-sm-6 p-2">
 
-                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { setPlace('IP67 Waterproof Technology') }}>
-                      <div>
-                        <p className="text-center fw-600 fs18 text-black">IP67 Waterproof Technology*</p>
-                        <p className="text-center fw-600 fs18 text-black mb-0">+ $68</p>
+                      <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { setPlace('IP67 Waterproof Technology') }}>
+                        <div>
+                          <p className="text-center fw-600 fs18 text-black">IP67 Waterproof Technology*</p>
+                          <p className="text-center fw-600 fs18 text-black mb-0">+ $68</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
+                    <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
 
+                  </div>
+
+                  <PowerAdapt
+                    Adptr={Adptr}
+                    setAdptr={setAdptr}
+                  />
+                  <AcrylicBackground
+                    AcrylicBkgrnd={AcrylicBkgrnd}
+                    setAcrylicBkgrnd={setAcrylicBkgrnd}
+                  />
                 </div>
-
               </div>
             </div>
             <div className="col-md-7 Output">
@@ -356,7 +370,7 @@ function App() {
         <h1 className="tc-pink text-center">Create a Custom Neon® sign in 5 easy steps</h1>
         <div className='mx-auto text-center my-4'>
           <img className='my-2' src={videoImg} alt="" />
-          <img className='my-2' className='container' src={OneToFive} alt="" />
+          <img className='my-2 container' src={OneToFive} alt="" />
         </div>
       </div>
       <div className='containerImg'>
@@ -598,7 +612,7 @@ function App() {
           <div className='col-6 col-md-4 text-white'>
             <div className='d-inline-flex'>
               <img src={facebookLogo} alt="" />
-              <img src={instagramLogo} alt="" className='ms-2'/>
+              <img src={instagramLogo} alt="" className='ms-2' />
             </div>
           </div>
         </div>
