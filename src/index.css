@@ -362,3 +362,77 @@ textarea::placeholder {
   background-color: #fff;
   border: 1px solid #FF7AC7;
 }
+
+.containerImg {
+  height: 65vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parallax__container {
+  position: absolute;
+  clip: rect(0, auto, auto, 0);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* z-index: -10; */
+}
+
+._bg {
+  height: 667.035px;
+  top: 58.707px;
+}
+
+.bg1 {
+  background-image: url(../src/Assets/Imgs/bg_1.jpg) !important;
+}
+
+.bg2 {
+  background-image: url(../src/Assets/Imgs/bg_2.jpg) !important;
+}
+
+.bg3 {
+  background-image: url(../src/Assets/Imgs/bg_3.jpg) !important;
+}
+
+.faq_bg {
+  background-color: #F4F4F4 !important;
+}
+
+.parallax__container .parallax--bg {
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  position: fixed;
+  /* top: 0;
+  -webkit-transform: translate3d(0, 0, 0); */
+  transform: translate3d(0, 0, 0);
+  /* -webkit-transform-style: preserve-3d; */
+  transform-style: preserve-3d;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.accordion-button {
+  border-bottom: 1px solid grey !important;
+}
+
+.accordion-button::after {
+  width: 2.25rem !important;
+}
+
+.footer-middle {
+  height: 200px;
+  padding: 45px 0 0;
+  font-size: 16px;
+  text-align: left;
+  background-color: #5761ff;
+}
