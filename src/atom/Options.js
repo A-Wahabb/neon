@@ -3,7 +3,7 @@ import OptionEach from "./OptionEach";
 const Options = (props) => {
     return (
         <>
-            <div className="row p-3 m-auto">
+            <div className="row py-3 m-auto">
                 <p className="fw-600 fs18 tc-grey-2">Select your Options</p>
                 <div className="col-sm-6 p-2">
                     <OptionEach
