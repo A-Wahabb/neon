@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import './ColorStyle.css';
 import "./fontImport.css"
+import './checkbox.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faAirFreshener } from '@fortawesome/free-solid-svg-icons'
 import BannerSlider from './atom/Banner';
 import ColorSlction from './atom/ColorSlction';
 import FontSlction from './atom/FontSlction';
+import Options from './atom/Options';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
   const [Selction, setSelction] = useState('TEXT')
   const [Image, setImage] = useState('TEXT')
   const [ShowShadow, setShowShadow] = useState(true)
+  const [slctdSize, setslctdSize] = useState('Small')
+  const [Place, setPlace] = useState('Indoor')
   const [FontList, setFontList] = useState([
     'Alexa',
     'Barcelona',
@@ -151,21 +155,6 @@ function App() {
                         name={each}
                         setFontFamily={setFontFamily} />
                     ))}
-                    {/* <div className={`col-6 col-sm-4 col-md-3  ${FontFamily == 'Arkania-regular' && 'active'}`} >
-                      <p className={`roundbdr mb-0 text-center text-black cursorPointer Arkania-regular   `} onClick={() => setFontFamily('Arkania-regular')}>Font Style</p>
-                    </div>
-                    <div className={`col-6 col-sm-4 col-md-3  ${FontFamily == 'Grayscale-signature' && 'active'}`} >
-                      <p className={`roundbdr mb-0 text-center text-black cursorPointer GrayScaleSign   `} onClick={() => setFontFamily('Grayscale-signature')}>Font Style</p>
-                    </div>
-                    <div className={`col-6 col-sm-4 col-md-3  ${FontFamily == 'Alisking' && 'active'}`} >
-                      <p className={`roundbdr mb-0 text-center text-black cursorPointer Alisking  `} onClick={() => setFontFamily('Alisking')}>Font Style </p>
-                    </div>
-                    <div className={`col-6 col-sm-4 col-md-3  ${FontFamily == 'Atyla-demo' && 'active'}`} >
-                      <p className={`roundbdr mb-0 text-center text-black cursorPointer Atyla-demo   `} onClick={() => setFontFamily('Atyla-demo')}>Font Style</p>
-                    </div>
-                    <div className={`col-6 col-sm-4 col-md-3  ${FontFamily == 'Hastron' && 'active'}`} >
-                      <p className={`roundbdr mb-0 text-center text-black cursorPointer Hastron  `} onClick={() => setFontFamily('Hastron')}>Font Style</p>
-                    </div> */}
                   </div>
                 </>
                 }
@@ -283,6 +272,33 @@ function App() {
 
                   </div>
                 </>}
+
+                <Options
+                  slctdSize={slctdSize}
+                  setslctdSize={setslctdSize}
+                />
+
+                <div className="row p-3 m-auto">
+                  <div className="col-sm-6 p-2">
+
+                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'Indoor' && 'active'} `} onClick={() => { setPlace('Indoor') }}>
+                      <div>
+                        <p className="text-center fw-600 fs18 text-black mb-0">Indoor</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6 p-2">
+
+                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { setPlace('IP67 Waterproof Technology') }}>
+                      <div>
+                        <p className="text-center fw-600 fs18 text-black">IP67 Waterproof Technology*</p>
+                        <p className="text-center fw-600 fs18 text-black mb-0">+ $68</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
+
+                </div>
 
               </div>
             </div>
