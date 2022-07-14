@@ -15,8 +15,8 @@
 }
 
 .switch label {
-    height: 50px;
-    width: 102px;
+    height: 35px;
+    width: 74px;
     background-color: white;
     border-radius: 100px;
     display: block;
@@ -24,8 +24,8 @@
 }
 
 .switch label .bulb {
-    height: 35px;
-    width: 35px;
+    height: 15px;
+    width: 15px;
     background-color: #4a426b;
     border-radius: 50%;
     position: relative;

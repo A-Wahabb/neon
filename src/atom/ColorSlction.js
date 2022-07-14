@@ -5,7 +5,7 @@ const ColorSlction = (props) => {
                 <p className={`bgSlct m-3 ${props.Code} ${props.Color === props.Code && 'active'}`}>
                     O
                 </p>
-                <p className="text-black fw-400 fs10 text-center">{props.name}</p>
+                <p className="text-black fw-600 fs10 text-center">{props.name}</p>
             </div>
         </>
     );
