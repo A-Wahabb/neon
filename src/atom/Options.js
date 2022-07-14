@@ -3,9 +3,9 @@ import OptionEach from "./OptionEach";
 const Options = (props) => {
     return (
         <>
-            <div className="row py-3 m-auto">
-                <p className="fw-600 fs18 tc-grey-2">Select your Options</p>
-                <div className="col-sm-6 p-2">
+            <div className="row py-3 g-2">
+                <p className="fw-600 fs18 tc-grey-2 ">Select your Options</p>
+                <div className="col-sm-6">
                     <OptionEach
                         size="Small"
                         price="110"
@@ -16,7 +16,7 @@ const Options = (props) => {
                     />
                 </div>
 
-                <div className="col-sm-6 p-2">
+                <div className="col-sm-6">
                     <OptionEach
                         size="Medium"
                         price="130"
@@ -27,7 +27,7 @@ const Options = (props) => {
                     />
                 </div>
 
-                <div className="col-sm-6 p-2">
+                <div className="col-sm-6">
                     <OptionEach
                         size="Large"
                         price="150"
@@ -37,7 +37,7 @@ const Options = (props) => {
                         setslctdSize={props.setslctdSize}
                     />
                 </div>
-                <div className="col-sm-6 p-2">
+                <div className="col-sm-6">
                     <OptionEach
                         size="X Large"
                         price="180"
@@ -47,7 +47,7 @@ const Options = (props) => {
                         setslctdSize={props.setslctdSize}
                     />
                 </div>
-                <div className="col-sm-6 p-2">
+                <div className="col-sm-6">
                     <OptionEach
                         size="XX Large"
                         price="200"
@@ -57,9 +57,9 @@ const Options = (props) => {
                         setslctdSize={props.setslctdSize}
                     />
                 </div>
-                <div className="col-sm-6 p-2">
+                <div className="col-sm-6">
                     <OptionEach
-                        size="supeersized"
+                        size="supersized"
                         price="250"
                         length="20"
                         height=""

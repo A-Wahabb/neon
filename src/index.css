@@ -413,6 +413,7 @@ textarea::placeholder {
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
+  top: 0;
   position: fixed;
   /* top: 0;
   -webkit-transform: translate3d(0, 0, 0); */
