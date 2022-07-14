@@ -105,40 +105,40 @@ function App() {
           <div className="col-md-6 col-lg-4">
             <div className="Selection_Box">
               <ul className="text-center combineButton RadioToButton px-0 d-flex justify-content-center">
-                <li className="w-50">
+                <li className="w-50 selected" onClick={(e) => { setSelction('TEXT') }}>
                   <input
                     type="radio"
                     id="SlctTEXT"
                     name="Selction"
                     value="TEXT"
                     defaultChecked={Selction == "TEXT"}
-                    onChange={(e) => { setSelction('TEXT') }}
+                  onChange={(e) => { setSelction('TEXT') }}
                   />
                   <label htmlFor="SlctTEXT" className="py-1 fw-bold mb-0">
                     TEXT
                   </label>
                 </li>
-                <li className="w-50">
+                <li className="w-50" onClick={(e) => { setSelction('FONT') }}>
                   <input
                     type="radio"
                     id="SlctFONT"
                     name="Selction"
                     value="FONT"
                     defaultChecked={Selction == "FONT"}
-                    onChange={(e) => { setSelction('FONT') }}
+                  onChange={(e) => { setSelction('FONT') }}
                   />
                   <label htmlFor="SlctFONT" className="py-1 fw-bold mb-0">
                     FONT
                   </label>
                 </li>
-                <li className="w-50">
+                <li className="w-50" onClick={(e) => { setSelction('COLOR') }}>
                   <input
                     type="radio"
                     id="SlctCOLOR"
                     name="Selction"
                     value="COLOR"
                     defaultChecked={Selction == "COLOR"}
-                    onChange={(e) => { setSelction('COLOR') }}
+                  onChange={(e) => { setSelction('COLOR') }}
                   />
                   <label htmlFor="SlctCOLOR" className="py-1 fw-bold mb-0">
                     COLOR
