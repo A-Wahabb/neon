@@ -2,8 +2,6 @@ import { useState } from 'react';
 import './ColorStyle.css';
 import "./fontImport.css"
 import './checkbox.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLightbulb, faAirFreshener } from '@fortawesome/free-solid-svg-icons'
 import BannerSlider from './atom/Banner';
 import ColorSlction from './atom/ColorSlction';
 import FontSlction from './atom/FontSlction';
@@ -21,9 +19,12 @@ import iconpower from '../src/Assets/Imgs/iconpower.png'
 import iconstrong from '../src/Assets/Imgs/iconstrong.png'
 import facebookLogo from '../src/Assets/Imgs/facebook-logo.png'
 import instagramLogo from '../src/Assets/Imgs/instagram-logo.png'
+import messenger from '../src/Assets/Imgs/messenger.png'
 import PowerAdapt from './atom/PowerAdapt';
 import AcrylicBackground from './atom/AcrylicBackground';
 import Navbar from './Navbar';
+import { Textfit } from 'react-textfit';
+
 
 
 function App() {
@@ -88,16 +89,20 @@ function App() {
     backgroundSize: '100 % 100 %',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    padding: '10px',
+    borderRadius: '7%'
   };
 
-
+  // window.fitText(document.getElementById("responsiveText"),3);
 
 
   return (
     <div className="App">
       <Navbar />
+      <div className='position-fixed bottom_right'>
+        <img src={messenger} width='70' onClick={() => { alert('4 new messages') }} />
+      </div>
       <div className='row pt-5 container mx-auto main-bg'>
-
         <p className="tc-blue fw-bold fs30 text-center">Create Your Own Custom Neon</p>
         <p className="tc-pink fw-400 fs22 text-center" >Your own creation, handmade from light.</p>
 
@@ -112,7 +117,7 @@ function App() {
                     name="Selction"
                     value="TEXT"
                     defaultChecked={Selction == "TEXT"}
-                  onChange={(e) => { setSelction('TEXT') }}
+                    onChange={(e) => { setSelction('TEXT') }}
                   />
                   <label htmlFor="SlctTEXT" className="py-1 fw-bold mb-0">
                     TEXT
@@ -125,7 +130,7 @@ function App() {
                     name="Selction"
                     value="FONT"
                     defaultChecked={Selction == "FONT"}
-                  onChange={(e) => { setSelction('FONT') }}
+                    onChange={(e) => { setSelction('FONT') }}
                   />
                   <label htmlFor="SlctFONT" className="py-1 fw-bold mb-0">
                     FONT
@@ -138,7 +143,7 @@ function App() {
                     name="Selction"
                     value="COLOR"
                     defaultChecked={Selction == "COLOR"}
-                  onChange={(e) => { setSelction('COLOR') }}
+                    onChange={(e) => { setSelction('COLOR') }}
                   />
                   <label htmlFor="SlctCOLOR" className="py-1 fw-bold mb-0">
                     COLOR
@@ -362,7 +367,7 @@ function App() {
             </div>
           </div>
           <div className="col-md-6 col-lg-8 Output">
-            <div className="position-absolute">
+            <div className="position-absolute mt-2 ms-0 ms-md-3 ms-lg-5">
               <div className="switch">
                 <input type="checkbox" name="toggle" defaultChecked={ShowShadow} onChange={(e) => { setShowShadow(e.target.checked) }} />
                 <label for="toggle">
@@ -384,8 +389,10 @@ function App() {
               </div>
             </div>
             <div className='w-100 h-100 position-relative'>
-              <div className="d-flex justify-content-center pt-5 w-100 h-100" style={BackGroundWall} >
-                <p className={`bg-transparent ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
+              <div className="container text-center h-100" style={BackGroundWall} >
+                <Textfit className='viewContainer mx-auto my-auto'>
+                    <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
+                </Textfit>
               </div>
               <BannerSlider setImage={setImage} />
             </div>

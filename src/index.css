@@ -456,3 +456,15 @@ textarea::placeholder {
 .acrylic img.active {
   border-color: #ff7ac7 !important;
 }
+
+.bottom_right {
+  bottom: 5% !important;
+  right: 5% !important;
+}
+
+.viewContainer {
+  width: 90% !important;
+  height: 80% !important;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
