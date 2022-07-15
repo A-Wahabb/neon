@@ -163,250 +163,252 @@ function App() {
         <p className="tc-blue fw-bold fs30 text-center">Create Your Own Custom Neon</p>
         <p className="tc-pink fw-400 fs22 text-center" >Your own creation, handmade from light.</p>
 
-        <div className="row g-3">
-          <div className="col-md-6 col-lg-4">
-            <div className="Selection_Box">
-              <ul className="text-center combineButton RadioToButton px-0 d-flex justify-content-center">
-                <li className="w-50 selected" onClick={(e) => { setSelction('TEXT') }}>
-                  <input
-                    type="radio"
-                    id="SlctTEXT"
-                    name="Selction"
-                    value="TEXT"
-                    defaultChecked={Selction == "TEXT"}
-                    onChange={(e) => { setSelction('TEXT') }}
+          <div className="row g-3">
+            <div className="col-md-6 col-lg-4">
+              <div className="Selection_Box">
+                <ul className="text-center combineButton RadioToButton px-0 d-flex justify-content-center">
+                  <li className="w-50 selected" onClick={(e) => { setSelction('TEXT') }}>
+                    <input
+                      type="radio"
+                      id="SlctTEXT"
+                      name="Selction"
+                      value="TEXT"
+                      defaultChecked={Selction == "TEXT"}
+                      onChange={(e) => { setSelction('TEXT') }}
+                    />
+                    <label htmlFor="SlctTEXT" className="py-1 fw-bold mb-0">
+                      TEXT
+                    </label>
+                  </li>
+                  <li className="w-50" onClick={(e) => { setSelction('FONT') }}>
+                    <input
+                      type="radio"
+                      id="SlctFONT"
+                      name="Selction"
+                      value="FONT"
+                      defaultChecked={Selction == "FONT"}
+                      onChange={(e) => { setSelction('FONT') }}
+                    />
+                    <label htmlFor="SlctFONT" className="py-1 fw-bold mb-0">
+                      FONT
+                    </label>
+                  </li>
+                  <li className="w-50" onClick={(e) => { setSelction('COLOR') }}>
+                    <input
+                      type="radio"
+                      id="SlctCOLOR"
+                      name="Selction"
+                      value="COLOR"
+                      defaultChecked={Selction == "COLOR"}
+                      onChange={(e) => { setSelction('COLOR') }}
+                    />
+                    <label htmlFor="SlctCOLOR" className="py-1 fw-bold mb-0">
+                      COLOR
+                    </label>
+                  </li>
+                </ul>
+                <div className="px-3 pb-5">
+                  {Selction === 'TEXT' && <>
+                    <div className="mt-3">
+                      <textarea
+                        className='inputText w-100 py-3'
+                        placeholder='ENTER TEXT HERE &#10;Press Enter/Return for a new line'
+                        name='UserInput'
+                        onChange={(e) => setUserInput(e.target.value)} />
+
+                    </div>
+
+                  </>}
+                  {Selction === 'FONT' && <>
+                    <p className="tc-grey fw-bold fs16 text-center">CHOOSE FONT</p>
+
+                    <div className="row w-100 mx-auto g-2 FontsCollection">
+                      {FontList.map(each => (
+
+                        <FontSlction
+                          FontFamily={FontFamily}
+                          name={each}
+                          setFontFamily={setFontFamily} />
+                      ))}
+                    </div>
+                  </>
+                  }
+
+                  {Selction === 'COLOR' && <>
+                    <p className="tc-grey fw-bold fs16 text-center">CHOOSE YOUR COLOR</p>
+                    <div className="d-flex flex-wrap " >
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Warm White'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color10'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='White'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color20'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Lemon Yellow'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color30'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Golden Yellow'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color40'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Orange'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color50'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Light Red'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color60'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Red'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color70'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Pink'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color80'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Cotton Candy'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color90'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Deep Pink'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color100'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Purple'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color110'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Deep Blue'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color120'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Electric Blue'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color130'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Ice Blue'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color140'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Tropical Blue'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color150'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Mint'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color160'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Green'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color170'} />
+                      </div>
+
+                      <div className="col-sm-2">
+                        <ColorSlction
+                          name='Deep Green'
+                          Color={Color}
+                          setColor={setColor}
+                          Code={'color180'} />
+                      </div>
+
+                    </div>
+                  </>}
+
+                  <Options
+                    slctdSize={slctdSize}
+                    setslctdSize={setslctdSize}
                   />
-                  <label htmlFor="SlctTEXT" className="py-1 fw-bold mb-0">
-                    TEXT
-                  </label>
-                </li>
-                <li className="w-50" onClick={(e) => { setSelction('FONT') }}>
-                  <input
-                    type="radio"
-                    id="SlctFONT"
-                    name="Selction"
-                    value="FONT"
-                    defaultChecked={Selction == "FONT"}
-                    onChange={(e) => { setSelction('FONT') }}
-                  />
-                  <label htmlFor="SlctFONT" className="py-1 fw-bold mb-0">
-                    FONT
-                  </label>
-                </li>
-                <li className="w-50" onClick={(e) => { setSelction('COLOR') }}>
-                  <input
-                    type="radio"
-                    id="SlctCOLOR"
-                    name="Selction"
-                    value="COLOR"
-                    defaultChecked={Selction == "COLOR"}
-                    onChange={(e) => { setSelction('COLOR') }}
-                  />
-                  <label htmlFor="SlctCOLOR" className="py-1 fw-bold mb-0">
-                    COLOR
-                  </label>
-                </li>
-              </ul>
-              <div className="px-3 pb-5">
-                {Selction === 'TEXT' && <>
-                  <div className="mt-3">
-                    <textarea
-                      className='inputText w-100 py-3'
-                      placeholder='ENTER TEXT HERE &#10;Press Enter/Return for a new line'
-                      name='UserInput'
-                      onChange={(e) => setUserInput(e.target.value)} />
 
-                  </div>
+                  <div className="row py-3 m-auto">
+                    <div className="col-sm-6 p-2">
 
-                </>}
-                {Selction === 'FONT' && <>
-                  <p className="tc-grey fw-bold fs16 text-center">CHOOSE FONT</p>
-
-                  <div className="row w-100 mx-auto g-2 FontsCollection">
-                    {FontList.map(each => (
-
-                      <FontSlction
-                        FontFamily={FontFamily}
-                        name={each}
-                        setFontFamily={setFontFamily} />
-                    ))}
-                  </div>
-                </>
-                }
-
-                {Selction === 'COLOR' && <>
-                  <p className="tc-grey fw-bold fs16 text-center">CHOOSE YOUR COLOR</p>
-                  <div className="d-flex flex-wrap " >
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Warm White'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color10'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='White'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color20'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Lemon Yellow'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color30'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Golden Yellow'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color40'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Orange'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color50'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Light Red'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color60'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Red'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color70'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Pink'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color80'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Cotton Candy'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color90'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Deep Pink'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color100'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Purple'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color110'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Deep Blue'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color120'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Electric Blue'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color130'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Ice Blue'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color140'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Tropical Blue'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color150'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Mint'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color160'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Green'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color170'} />
-                    </div>
-
-                    <div className="col-sm-2">
-                      <ColorSlction
-                        name='Deep Green'
-                        Color={Color}
-                        setColor={setColor}
-                        Code={'color180'} />
-                    </div>
-
-                  </div>
-                </>}
-
-                <Options
-                  slctdSize={slctdSize}
-                  setslctdSize={setslctdSize}
-                />
-
-                <div className="row py-3 m-auto">
-                  <div className="col-sm-6 p-2">
-
-                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'Indoor' && 'active'} `} onClick={() => { setPlace('Indoor') }}>
-                      <div>
-                        <p className="text-center fw-bold fs14 text-black mb-0">Indoor</p>
+                      <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'Indoor' && 'active'} `} onClick={() => { setPlace('Indoor') }}>
+                        <div>
+                          <p className="text-center fw-bold fs14 text-black mb-0">Indoor</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-sm-6 p-2">
+                    <div className="col-sm-6 p-2">
 
-                    <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { setPlace('IP67 Waterproof Technology') }}>
-                      <div>
-                        <p className="text-center fw-bold fs14 text-black">IP67 Waterproof Technology*</p>
-                        <p className="text-center fw-bold fs14 text-black mb-0">+ $68</p>
+                      <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { setPlace('IP67 Waterproof Technology') }}>
+                        <div>
+                          <p className="text-center fw-bold fs14 text-black">IP67 Waterproof Technology*</p>
+                          <p className="text-center fw-bold fs14 text-black mb-0">+ $68</p>
+                        </div>
                       </div>
                     </div>
+<<<<<<< HEAD
                   </div>
                   {Place == 'IP67 Waterproof Technology' ?
                     <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
@@ -428,38 +430,62 @@ function App() {
                   sizeParams={sizeParams}
                   setsizeParams={setsizeParams}
                 />
+=======
+                    <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
+
+                  </div>
+
+                  <PowerAdapt
+                    Adptr={Adptr}
+                    setAdptr={setAdptr}
+                  />
+                  <AcrylicBackground
+                    AcrylicBkgrnd={AcrylicBkgrnd}
+                    setAcrylicBkgrnd={setAcrylicBkgrnd}
+                  />
+                </div>
+>>>>>>> 09a2c6a17a665be2b46059cbf8e37d2464bcbb34
               </div>
             </div>
-          </div>
-          <div className="col-md-6 col-lg-8 Output">
-            <div className="position-absolute mt-2 ms-0 ms-md-3 ms-lg-5">
-              <div className="switch">
-                <input type="checkbox" name="toggle" defaultChecked={ShowShadow} onChange={(e) => { setShowShadow(e.target.checked) }} />
-                <label for="toggle">
-                  <i className="bulb">
-                    <span className="bulb-center"></span>
-                    <span className="filament-1"></span>
-                    <span className="filament-2"></span>
-                    <span className="reflections">
-                      <span></span>
-                    </span>
-                    <span className="sparks">
-                      <i className="spark1"></i>
-                      <i className="spark2"></i>
-                      <i className="spark3"></i>
-                      <i className="spark4"></i>
-                    </span>
-                  </i>
-                </label>
+            <div className="col-md-6 col-lg-8 Output">
+              <div className="position-absolute mt-2 ms-0 ms-md-3 ms-lg-5">
+                <div className="switch">
+                  <input type="checkbox" name="toggle" defaultChecked={ShowShadow} onChange={(e) => { setShowShadow(e.target.checked) }} />
+                  <label for="toggle">
+                    <i className="bulb">
+                      <span className="bulb-center"></span>
+                      <span className="filament-1"></span>
+                      <span className="filament-2"></span>
+                      <span className="reflections">
+                        <span></span>
+                      </span>
+                      <span className="sparks">
+                        <i className="spark1"></i>
+                        <i className="spark2"></i>
+                        <i className="spark3"></i>
+                        <i className="spark4"></i>
+                      </span>
+                    </i>
+                  </label>
+                </div>
               </div>
+<<<<<<< HEAD
             </div>
             <div className='w-100 ViewPort_div position-relative'>
               <div className="container text-center h-100" style={BackGroundWall} >
                 <Textfit className='viewContainer mx-auto my-auto'>
                   <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
                 </Textfit>
+=======
+              <div className='w-100 h-100 position-relative'>
+                <div className="container text-center h-100" style={BackGroundWall} >
+                  <Textfit className='viewContainer mx-auto my-auto'>
+                    <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
+                  </Textfit>
+                </div>
+                <BannerSlider setImage={setImage} />
+>>>>>>> 09a2c6a17a665be2b46059cbf8e37d2464bcbb34
               </div>
-              <BannerSlider setImage={setImage} />
             </div>
           </div>
         </div>
