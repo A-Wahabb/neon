@@ -82,6 +82,7 @@ function App() {
     fontSize: `${FontSize}px`,
     fontFamily: FontFamily,
     boxShadow: 'unset',
+    paddingTop: '30px'
   };
   const BackGroundWall = {
     // backgroundColor: BackgroundColor,
@@ -389,7 +390,7 @@ function App() {
                   </label>
                 </div>
               </div>
-              <div className='w-100 h-100 position-relative'>
+              <div className='w-100 h-100 position-relative qwerty'>
                 <div className="container text-center h-100" style={BackGroundWall} >
                   <Textfit className='viewContainer mx-auto my-auto'>
                     <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
