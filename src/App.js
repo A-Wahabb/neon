@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './ColorStyle.css';
 import "./fontImport.css"
 import './checkbox.css'
@@ -6,24 +6,14 @@ import BannerSlider from './atom/Banner';
 import ColorSlction from './atom/ColorSlction';
 import FontSlction from './atom/FontSlction';
 import Options from './atom/Options';
-import videoImg from '../src/Assets/Imgs/videoimage.jpg'
-import OneToFive from '../src/Assets/Imgs/OneToFive.jpg'
-import SignDiagramUSA from '../src/Assets/Imgs/SignDiagramUSA.png'
-import icondesign from '../src/Assets/Imgs/icondesign.png'
-import iconadapter from '../src/Assets/Imgs/iconadapter.png'
-import iconshipping from '../src/Assets/Imgs/iconshipping.png'
-import iconinstall from '../src/Assets/Imgs/iconinstall.png'
-import warranty from '../src/Assets/Imgs/warranty.jpg'
-import iconremote from '../src/Assets/Imgs/iconremote.png'
-import iconpower from '../src/Assets/Imgs/iconpower.png'
-import iconstrong from '../src/Assets/Imgs/iconstrong.png'
 import facebookLogo from '../src/Assets/Imgs/facebook-logo.png'
 import instagramLogo from '../src/Assets/Imgs/instagram-logo.png'
-import messenger from '../src/Assets/Imgs/messenger.png'
 import PowerAdapt from './atom/PowerAdapt';
 import AcrylicBackground from './atom/AcrylicBackground';
 import Navbar from './Navbar';
 import { Textfit } from 'react-textfit';
+import SelectBackBoard from './SelectBackBoard';
+import HomePage from './Routes/HomePage';
 
 
 
@@ -37,6 +27,13 @@ function App() {
   const [Image, setImage] = useState('TEXT')
   const [ShowShadow, setShowShadow] = useState(true)
   const [slctdSize, setslctdSize] = useState('Small')
+  const [sizeParams, setsizeParams] = useState(
+    {
+      price: "110",
+      length: "10",
+      height: ""
+    }
+  )
   const [Place, setPlace] = useState('Indoor')
   const [Adptr, setAdptr] = useState('')
   const [AcrylicBkgrnd, setAcrylicBkgrnd] = useState('')
@@ -93,16 +90,76 @@ function App() {
     borderRadius: '7%'
   };
 
+  const settingDetails = () => {
+    if (slctdSize == 'Small') {
+      setsizeParams.price('$110')
+      setsizeParams.length('10')
+      setsizeParams.height('')
+    }
+    else if (slctdSize == 'Medium') {
+      setsizeParams.price('$130')
+      setsizeParams.length('15')
+      setsizeParams.height('')
+    }
+    else if (slctdSize == 'Large') {
+      setsizeParams.price('$150')
+      setsizeParams.length('20')
+      setsizeParams.height('')
+    }
+    else if (slctdSize == 'X Large') {
+      setsizeParams.price('$180')
+      setsizeParams.length('25')
+      setsizeParams.height('')
+    }
+    else if (slctdSize == 'XX Large') {
+      setsizeParams.price('$200')
+      setsizeParams.length('30')
+      setsizeParams.height('')
+    }
+    else if (slctdSize == 'supersized') {
+      setsizeParams.price('$250')
+      setsizeParams.length('35')
+      setsizeParams.height('')
+    }
+  }
+
+
   // window.fitText(document.getElementById("responsiveText"),3);
 
 
   return (
     <div className="App">
       <Navbar />
-      <div className='position-fixed bottom_right'>
-        <img src={messenger} width='70' onClick={() => { alert('4 new messages') }} />
+      <div className='position-fixed bottom_right shadow_'>
+        <svg width="36" height="36" viewBox="0 0 36 36"><path fill="white" d="M1 17.99C1 8.51488 8.42339 1.5 18 1.5C27.5766 1.5 35 8.51488 35 17.99C35 27.4651 27.5766 34.48 18 34.48C16.2799 34.48 14.6296 34.2528 13.079 33.8264C12.7776 33.7435 12.4571 33.767 12.171 33.8933L8.79679 35.3828C7.91415 35.7724 6.91779 35.1446 6.88821 34.1803L6.79564 31.156C6.78425 30.7836 6.61663 30.4352 6.33893 30.1868C3.03116 27.2287 1 22.9461 1 17.99ZM12.7854 14.8897L7.79161 22.8124C7.31238 23.5727 8.24695 24.4295 8.96291 23.8862L14.327 19.8152C14.6899 19.5398 15.1913 19.5384 15.5557 19.8116L19.5276 22.7905C20.7193 23.6845 22.4204 23.3706 23.2148 22.1103L28.2085 14.1875C28.6877 13.4272 27.7531 12.5704 27.0371 13.1137L21.673 17.1847C21.3102 17.4601 20.8088 17.4616 20.4444 17.1882L16.4726 14.2094C15.2807 13.3155 13.5797 13.6293 12.7854 14.8897Z"></path></svg>
       </div>
-      <div className='row pt-5 container mx-auto main-bg'>
+      <HomePage
+        UserInput={UserInput}
+        Selction={Selction}
+        setSelction={setSelction}
+        setUserInput={setUserInput}
+        FontList={FontList}
+        FontFamily={FontFamily}
+        setFontFamily={setFontFamily}
+        setColor={setColor}
+        Color={Color}
+        slctdSize={slctdSize}
+        setslctdSize={setslctdSize}
+        Place={Place}
+        setPlace={setPlace}
+        Adptr={Adptr}
+        setAdptr={setAdptr}
+        AcrylicBkgrnd={AcrylicBkgrnd}
+        setAcrylicBkgrnd={setAcrylicBkgrnd}
+        sizeParams={sizeParams}
+        setsizeParams={setsizeParams}
+        ShowShadow={ShowShadow}
+        setShowShadow={setShowShadow}
+        BackGroundWall={BackGroundWall}
+        setImage={setImage}
+        mystyle={mystyle}
+      />
+      {/* <div className='row pt-5 container mx-auto main-bg'>
         <p className="tc-blue fw-bold fs30 text-center">Create Your Own Custom Neon</p>
         <p className="tc-pink fw-400 fs22 text-center" >Your own creation, handmade from light.</p>
 
@@ -351,8 +408,11 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
-
+                  {Place == 'IP67 Waterproof Technology' ?
+                    <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
+                    :
+                    <p className="text-grey fs11" >Indoor Signs are not suitable for use outdoors or anywhere they might get wet. Inappropriate use will void the warranty.</p>
+                  }
                 </div>
 
                 <PowerAdapt
@@ -362,6 +422,11 @@ function App() {
                 <AcrylicBackground
                   AcrylicBkgrnd={AcrylicBkgrnd}
                   setAcrylicBkgrnd={setAcrylicBkgrnd}
+                />
+                <SelectBackBoard
+                  slctdSize={slctdSize}
+                  sizeParams={sizeParams}
+                  setsizeParams={setsizeParams}
                 />
               </div>
             </div>
@@ -388,10 +453,10 @@ function App() {
                 </label>
               </div>
             </div>
-            <div className='w-100 h-100 position-relative'>
+            <div className='w-100 ViewPort_div position-relative'>
               <div className="container text-center h-100" style={BackGroundWall} >
                 <Textfit className='viewContainer mx-auto my-auto'>
-                    <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
+                  <p className={`bg-transparent responsiveText ${Color} ${ShowShadow ? 'text-white active' : 'text'}`} style={mystyle}>{UserInput || 'Type here'}</p>
                 </Textfit>
               </div>
               <BannerSlider setImage={setImage} />
@@ -622,7 +687,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <footer className='footer-middle my-auto d-flex flex-container'>
         <div className='row container mx-auto gy-1'>

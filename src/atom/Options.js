@@ -61,7 +61,7 @@ const Options = (props) => {
                     <OptionEach
                         size="supersized"
                         price="250"
-                        length="20"
+                        length="35"
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
