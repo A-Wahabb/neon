@@ -18,6 +18,7 @@ import warranty from '../Assets/Imgs/warranty.jpg'
 import iconremote from '../Assets/Imgs/iconremote.png'
 import iconpower from '../Assets/Imgs/iconpower.png'
 import iconstrong from '../Assets/Imgs/iconstrong.png'
+import { Link } from 'react-router-dom'
 
 function HomePage(props) {
     return (
@@ -250,6 +251,7 @@ function HomePage(props) {
                             <Options
                                 slctdSize={props.slctdSize}
                                 setslctdSize={props.setslctdSize}
+                                settingDetails={props.settingDetails}
                             />
 
                             <div className="row py-3 m-auto">
@@ -290,6 +292,9 @@ function HomePage(props) {
                                 sizeParams={props.sizeParams}
                                 setsizeParams={props.setsizeParams}
                             />
+                            <Link to='/design-proof' >
+                                <button className='py-3 addtocart'>ADD TO CART</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

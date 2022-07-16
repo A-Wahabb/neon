@@ -13,6 +13,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
 
@@ -24,6 +25,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
 
@@ -35,6 +37,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -45,6 +48,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -55,6 +59,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -65,6 +70,7 @@ const Options = (props) => {
                         height=""
                         slctdSize={props.slctdSize}
                         setslctdSize={props.setslctdSize}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <p className="text-grey fs11" >*Each sign is handcrafted, and sizes shown will be accurate within 1 or 2 inches.</p>

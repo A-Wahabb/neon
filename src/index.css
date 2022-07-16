@@ -491,3 +491,23 @@ textarea::placeholder {
   background: #f5f5f5;
   border-radius: 15px;
 }
+
+.addtocart {
+  border: none !important;
+  font-weight: 600;
+  display: inline-block;
+  padding: 4px 0;
+  text-decoration: none;
+  font-size: 120%;
+  color: #FFF;
+  text-align: center;
+  transition: all 0.5s;
+  border-radius: 15px;
+  background-color: #5761ff;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.design_proof{
+  line-height: normal;
+}
