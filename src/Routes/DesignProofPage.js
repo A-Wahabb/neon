@@ -106,6 +106,9 @@ function DesignProofPage(props) {
             </div>
           </div>
         </div>
+        <div className='text-center'>
+          <button className='py-1 w-25 addtocart'>ADD TO CART</button>
+        </div>
       </div>
     </div >
   )
