@@ -13,14 +13,14 @@ function DesignProofPage(props) {
 
   const SendWhatsAppMessage = () => {
     let num = "923314250294"
-    let message = `*Sign*%0a%0a${props.UserInput.replace('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}"%0aHeight: ${props.sizeParams.height}" *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.`
+    let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}"%0aHeight: ${props.sizeParams.height}" *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.`
 
     let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     let url = ""
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       // return "tablet";
-      alert('tab')
+      // alert('tab')
 
       url = ` https://api.whatsapp.com/send/?phone=${num}&text=${message}&type=phone_number`
     }
@@ -29,13 +29,13 @@ function DesignProofPage(props) {
         ua
       )
     ) {
-      alert('MObile')
+      // alert('MObile')
       // return "mobile";
       url = ` https://api.whatsapp.com/send/?phone=${num}&text=${message}&type=phone_number`
     }
     // return "desktop";
     else {
-      alert('Desktop')
+      // alert('Desktop')
 
       url = ` https://web.whatsapp.com/send/?phone=${num}&text=${message}&type=phone_number`
     }
