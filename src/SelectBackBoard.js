@@ -15,7 +15,7 @@ function SelectBackBoard(props) {
                 <img src={props.neonbackground} width={171} />
                 <select onChange={(e) => { props.setneonbackground(e.target.value) }} class="form-control form-control-sm my-2"
                     style={{
-                        background: '#f5f5f5', padding: '10px 10px',
+                        background: '#f5f5f5', padding: '0 10px ',
                     }}>
                     <option value={props.neonbackground1} className='fs-small'>Cut Around Acrylic: Hang/Wall-mount <span className='tc-pink'>FREE</span></option>
                     <option value={props.neonbackground2} className='fs-small'>Rectangle Acrylic: Hang/Wall-mount <span className='tc-pink'>FREE</span></option>

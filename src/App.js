@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import './ColorStyle.css';
 import "./fontImport.css"
 import './checkbox.css'
-import facebookLogo from '../src/Assets/Imgs/facebook-logo.png'
-import instagramLogo from '../src/Assets/Imgs/instagram-logo.png'
 import Navbar from './Navbar'
 import HomePage from './Routes/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -13,6 +11,7 @@ import neonbackground2 from './Assets/Imgs/neonbackground2.png'
 import neonbackground3 from './Assets/Imgs/neonbackground3.png'
 import neonbackground4 from './Assets/Imgs/neonbackground4.png'
 import neonbackground5 from './Assets/Imgs/neonbackground5.png'
+import Footer from './atom/Footer';
 
 
 
@@ -72,6 +71,15 @@ function App() {
     'Vintage',
     'NewCursive',
   ])
+  //   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  //   function openModal() {
+  //       setIsOpen(true);
+  //   }
+
+  //   function closeModal() {
+  //     setIsOpen(false);
+  // }
 
   const neonbackgroundStyle = {
     backgroundImage: neonbackground
@@ -162,40 +170,7 @@ function App() {
             setneonbackground={setneonbackground}
           />} />
         </Routes>
-        <footer className='footer-middle my-auto d-flex flex-container'>
-          <div className='row container mx-auto gy-1'>
-            <div className='col-6 col-md-4 text-white'>
-              About us
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              FAQ
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              Contact info
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              Contact us
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              Privacy
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              info@customneon.com
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              Advanced search
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              Returns Policy
-            </div>
-            <div className='col-6 col-md-4 text-white'>
-              <div className='d-inline-flex'>
-                <img src={facebookLogo} alt="" />
-                <img src={instagramLogo} alt="" className='ms-2' />
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </Router >
 
     </div >

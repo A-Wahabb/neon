@@ -304,9 +304,15 @@ function HomePage(props) {
                                     neonbackground={props.neonbackground}
                                     setneonbackground={props.setneonbackground}
                                 />
-                                <Link to={props.UserInput !== 'Type Here' ? '/design-proof' : '/'} >
-                                    <button className='py-3 addtocart'>ADD TO CART</button>
-                                </Link>
+                                {props.UserInput !== 'Type Here' ?
+                                    <Link to={props.UserInput !== 'Type Here' ? '/design-proof' : '/'}>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" className='py-3 addtocart'>
+                                            ADD TO CART
+                                        </button>
+                                    </Link>
+                                    :
+                                    <button className='py-3 addtocart' onClick={() => alert('Please Add Some Text First')}>ADD TO CART</button>
+                                }
                             </div>
                         </div>
                     </div>
@@ -340,7 +346,6 @@ function HomePage(props) {
                                     ) :
                                         <p className={`bg-transparent mb- responsiveText ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} >Type Here</p>}
                                 </Textfit>
-
                             </div>
                             <BannerSlider setImage={props.setImage} />
                         </div>

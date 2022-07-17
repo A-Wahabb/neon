@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SignDiagramUSA from '../Assets/Imgs/SignDiagramUSA.png'
-import neonbackground1 from '../Assets/Imgs/neonbackground1.png'
 import Textfit from 'react-textfit'
 import { useNavigate } from "react-router-dom";
-import { useEffect } from 'react';
 
 
 
 
 function DesignProofPage(props) {
   const history = useNavigate();
+  const [email, setemail] = useState('')
+  const [mobNumber, setmobNumber] = useState('')
+
 
   const SendWhatsAppMessage = () => {
     let num = "923314250294"
-    let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}"%0aHeight: ${props.sizeParams.height}" *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.`
+    let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}%0aHeight: ${props.sizeParams.height} *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.%0a%0a*ContactDetails*%0a${mobNumber}%0a${email}`
 
     let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     let url = ""
@@ -49,6 +50,8 @@ function DesignProofPage(props) {
     }
   }, [])
 
+  console.log(email, '1111');
+  console.log(mobNumber, '1111');
 
   return (
 
@@ -58,14 +61,12 @@ function DesignProofPage(props) {
         <h3 className=''>PLEASE CHECK AND CONFIRM YOUR DESIGN</h3>
         <div className='col-md-4 mx-auto py-3'>
           <div className='divSize'>
-            <div className=' mx-auto my-auto'>
-              <Textfit className='viewContainer mx-auto mt-3' mode="multi">
+              <Textfit className='fs90' mode="multi">
                 {props.UserInput ? props.UserInput.split("\n").map((l, i) =>
                   <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} key={i}>{l}</p>
                 ) :
                   <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} >Type Here</p>}
               </Textfit>
-            </div>
           </div>
         </div>
       </div>
@@ -85,7 +86,7 @@ function DesignProofPage(props) {
             </ul>
           </div>
           <div className='my-3'>
-            <h3 class="text-center tc-blue my-3">DIMENSIONS</h3>
+            <h3 className="text-center tc-blue my-3">DIMENSIONS</h3>
             <ul>
               <li>Length:{props.sizeParams.length}"</li>
               <li>Height:{props.sizeParams.height}" *</li>
@@ -94,7 +95,7 @@ function DesignProofPage(props) {
             </ul>
           </div>
           <div className='my-3'>
-            <h3 class="text-center tc-blue my-3">BACKBOARD</h3>
+            <h3 className="text-center tc-blue my-3">BACKBOARD</h3>
             <div className="text-center" style={{
               background: '#f5f5f5', padding: '10px 0',
               borderRadius: '15px',
@@ -111,12 +112,12 @@ function DesignProofPage(props) {
           <div className='my-4 w-75'>
             <p>Electrical Plug: USA / Canada</p>
             <p>Some signs may require multiple power cords, which will be provided if necessary.</p>
-            <div class="form-check">
-              <input class="form-check-input fs-5" type="radio" name="mountingType" id="mountingType1" />
-              <label class="form-check-label fs-5 fw-600 d-inline-flex" for="mountingType1">
+            <div className="form-check">
+              <input className="form-check-input fs-5" type="radio" name="mountingType" id="mountingType1" />
+              <label className="form-check-label fs-5 fw-600 d-inline-flex" for="mountingType1">
                 Wall Mounting Kit
                 <div>
-                  <select class="form-control form-control-sm  px-3 mx-3 ">
+                  <select className="form-control form-control-sm  px-3 mx-3 ">
                     <option>Silver $15</option>
                     <option>Gold $17</option>
                     <option>Black $17</option>
@@ -124,9 +125,9 @@ function DesignProofPage(props) {
                 </div>
               </label>
             </div>
-            <div class="form-check">
-              <input class="form-check-input fs-5" type="radio" name="mountingType" id="mountingType2" checked />
-              <label class="form-check-label fs-5 fw-600" for="mountingType2">
+            <div className="form-check">
+              <input className="form-check-input fs-5" type="radio" name="mountingType" id="mountingType2" checked />
+              <label className="form-check-label fs-5 fw-600" for="mountingType2">
                 Sign Hanging Kit
               </label>
             </div>
@@ -138,18 +139,18 @@ function DesignProofPage(props) {
         <h2 className='tc-blue fw bold text-center'>(You can add comments/requests when checking out)</h2>
         <div className='row my-3 g-3'>
           <div className='col-md-6'>
-            <div class="form-check">
-              <input class="form-check-input fs-5" type="radio" name="AcceptConditions" id="AcceptConditions3" />
-              <label class="form-check-label fs-5 fw-600" for="AcceptConditions3">
+            <div className="form-check">
+              <input className="form-check-input fs-5" type="radio" name="AcceptConditions" id="AcceptConditions3" />
+              <label className="form-check-label fs-5 fw-600" for="AcceptConditions3">
                 <p className='mb-0'><span className='fw-bold tc-pink'>YES</span> I have checked and approve my text, size, color, font and backboard options. </p>
                 <p>	Production turnaround time can start now. Make my sign!</p>
               </label>
             </div>
           </div>
           <div className='col-md-6'>
-            <div class="form-check">
-              <input class="form-check-input fs-5" type="radio" name="AcceptConditions" id="AcceptConditions3" checked />
-              <label class="form-check-label fs-5 fw-600" for="AcceptConditions3">
+            <div className="form-check">
+              <input className="form-check-input fs-5" type="radio" name="AcceptConditions" id="AcceptConditions3" checked />
+              <label className="form-check-label fs-5 fw-600" for="AcceptConditions3">
                 <p>
                   <span className='fw-bold tc-pink'>NO</span>
                   I need further assistance. The turnaround time will not start yet.  Custom Neon will email you to finalize details (please check junk folder). If we don't hear back within 14 days, we will start manufacturing your order so you receive it in a timely manner.
@@ -158,9 +159,30 @@ function DesignProofPage(props) {
             </div>
           </div>
         </div>
-        <div className='text-center'>
-          <button className='py-1 w-25 addtocart' onClick={SendWhatsAppMessage}>Send WhatsApp</button>
-        </div>
+        <form className='container row'>
+          <div className="form-group col-md-6">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input
+              type="email"
+              onChange={(e) => setemail(e.target.value)}
+              value={email}
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com" />
+          </div>
+          <div className="form-group col-md-6">
+            <label for="exampleFormControlInput">Whatsapp Number</label>
+            <input
+              type="number"
+              value={mobNumber}
+              onChange={(e) => setmobNumber(e.target.value)}
+              className="form-control"
+              id="exampleFormControlInput" placeholder="123123123" />
+          </div>
+          <div className='text-center'>
+            <button type='submit' className='py-1 w-25 addtocart mt-3' onClick={SendWhatsAppMessage}>Send WhatsApp</button>
+          </div>
+        </form>
       </div>
     </div>
 

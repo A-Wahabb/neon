@@ -96,6 +96,9 @@ body {
   width: 100%;
 }
 
+.fs90 {
+  font-size: 90px !important
+}
 .fs30 {
   font-size: 30px
 }
