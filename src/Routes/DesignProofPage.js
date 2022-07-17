@@ -2,10 +2,14 @@ import React from 'react'
 import SignDiagramUSA from '../Assets/Imgs/SignDiagramUSA.png'
 import neonbackground1 from '../Assets/Imgs/neonbackground1.png'
 import Textfit from 'react-textfit'
+import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+
 
 
 
 function DesignProofPage(props) {
+  const history = useNavigate();
 
   const SendWhatsAppMessage = () => {
     let num = "923314250294"
@@ -39,7 +43,15 @@ function DesignProofPage(props) {
     window.open(url)
   }
 
+  useEffect(() => {
+    if (props.UserInput == 'Type Here') {
+      history('/')
+    }
+  }, [])
+
+
   return (
+
     <div >
       <div className='text-center my-3'>
         <h1 className='fw-bold tc-pink'>D E S I G N <span className='ms-3'> </span> P R O O F</h1>
@@ -88,7 +100,7 @@ function DesignProofPage(props) {
               borderRadius: '15px',
               margin: '10px',
             }}>
-              <img src={neonbackground1} width={220} />
+              <img src={props.neonbackground} width={220} />
 
             </div>
           </div>
@@ -150,7 +162,8 @@ function DesignProofPage(props) {
           <button className='py-1 w-25 addtocart' onClick={SendWhatsAppMessage}>Send WhatsApp</button>
         </div>
       </div>
-    </div >
+    </div>
+
   )
 }
 

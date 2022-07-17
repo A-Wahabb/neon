@@ -1,18 +1,29 @@
 import React from 'react'
-import neonbackground1 from './Assets/Imgs/neonbackground1.png'
 
 function SelectBackBoard(props) {
 
+
     return (
         <>
+            {console.log(props.neonbackground, '123')}
             <p className="fw-bold fs13 my-2 tc-grey-2">SELECT YOUR BACKBOARD:</p>
             <div className="text-center" style={{
                 background: '#f5f5f5', padding: '10px 0',
                 borderRadius: '15px',
                 margin: '10px',
             }}>
-                <img src={neonbackground1} width={171} />
-
+                <img src={props.neonbackground} width={171} />
+                <select onChange={(e) => { props.setneonbackground(e.target.value) }} class="form-control form-control-sm my-2"
+                    style={{
+                        background: '#f5f5f5', padding: '10px 10px',
+                    }}>
+                    <option value={props.neonbackground1} className='fs-small'>Cut Around Acrylic: Hang/Wall-mount <span className='tc-pink'>FREE</span></option>
+                    <option value={props.neonbackground2} className='fs-small'>Rectangle Acrylic: Hang/Wall-mount <span className='tc-pink'>FREE</span></option>
+                    <option value={props.neonbackground3} className='fs-small'>Cut To Letter: Hang/Wall-mount <span className='tc-pink'>+$27</span>
+                    </option>
+                    <option value={props.neonbackground4} className='fs-small'>Acrylic Stand: Free-Standing <span className='tc-pink'>+$27</span></option>
+                    <option value={props.neonbackground5} className='fs-small'>Open Box: Wall-mount <span className='tc-pink'>+$82</span></option>
+                </select>
             </div>
             <p className="fw-bold fs13 my-2 tc-grey-2">(more options will be available soon for backgrounds)</p>
 
