@@ -12,7 +12,7 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
-                    <div className="d-flex justify-content-between">
+                    <div className="d-md-flex justify-content-between">
                         <div className="px-3">
                             <p className="fs22 fw-bold text-black mb-0" href="#">HOME</p>
                         </div>
