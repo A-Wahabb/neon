@@ -11,8 +11,8 @@ const Options = (props) => {
                         price="110"
                         length="10"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
 
@@ -22,8 +22,8 @@ const Options = (props) => {
                         price="130"
                         length="15"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
 
@@ -33,8 +33,8 @@ const Options = (props) => {
                         price="150"
                         length="20"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -43,8 +43,8 @@ const Options = (props) => {
                         price="180"
                         length="25"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -53,8 +53,8 @@ const Options = (props) => {
                         price="200"
                         length="30"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <div className="col-sm-6">
@@ -63,8 +63,8 @@ const Options = (props) => {
                         price="250"
                         length="35"
                         height=""
-                        slctdSize={props.slctdSize}
-                        setslctdSize={props.setslctdSize}
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
                     />
                 </div>
                 <p className="text-grey fs11" >*Each sign is handcrafted, and sizes shown will be accurate within 1 or 2 inches.</p>
