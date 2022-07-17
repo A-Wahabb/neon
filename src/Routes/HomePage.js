@@ -291,6 +291,13 @@ function HomePage(props) {
                                 slctdSize={props.slctdSize}
                                 sizeParams={props.sizeParams}
                                 setsizeParams={props.setsizeParams}
+                                neonbackground1={props.neonbackground1}
+                                neonbackground2={props.neonbackground2}
+                                neonbackground3={props.neonbackground3}
+                                neonbackground4={props.neonbackground4}
+                                neonbackground5={props.neonbackground5}
+                                neonbackground={props.neonbackground}
+                                setneonbackground={props.setneonbackground}
                             />
                             <Link to='/design-proof' >
                                 <button className='py-3 addtocart'>ADD TO CART</button>

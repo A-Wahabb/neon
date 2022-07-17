@@ -508,6 +508,11 @@ textarea::placeholder {
   letter-spacing: 1px;
 }
 
-.design_proof{
+.design_proof {
   line-height: normal;
+}
+
+.neonbackground1 {
+  background-image: url('./Assets//Imgs/neonbackground1.png') !important;
+  width: 171px;
 }

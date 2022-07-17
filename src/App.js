@@ -8,6 +8,11 @@ import Navbar from './Navbar'
 import HomePage from './Routes/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import DesignProofPage from './Routes/DesignProofPage';
+import neonbackground1 from './Assets/Imgs/neonbackground1.png'
+import neonbackground2 from './Assets/Imgs/neonbackground2.png'
+import neonbackground3 from './Assets/Imgs/neonbackground3.png'
+import neonbackground4 from './Assets/Imgs/neonbackground4.png'
+import neonbackground5 from './Assets/Imgs/neonbackground5.png'
 
 
 
@@ -29,6 +34,7 @@ function App() {
       height: "",
     }
   )
+  const [neonbackground, setneonbackground] = useState('neonbackground1')
   const [Place, setPlace] = useState('Indoor')
   const [Adptr, setAdptr] = useState('')
   const [AcrylicBkgrnd, setAcrylicBkgrnd] = useState('')
@@ -68,6 +74,9 @@ function App() {
     'NewCursive',
   ])
 
+  const neonbackgroundStyle = {
+    backgroundImage: neonbackground
+  }
 
 
   const mystyle = {
@@ -134,6 +143,13 @@ function App() {
             setImage={setImage}
             mystyle={mystyle}
             settingDetails={settingDetails}
+            neonbackground={neonbackground}
+            setneonbackground={setneonbackground}
+            neonbackground1={neonbackground1}
+            neonbackground2={neonbackground2}
+            neonbackground3={neonbackground3}
+            neonbackground4={neonbackground4}
+            neonbackground5={neonbackground5}
           />} />
           <Route path="/design-proof" element={<DesignProofPage
             setsizeParams={setsizeParams}
@@ -144,6 +160,8 @@ function App() {
             mystyle={mystyle}
             FontSize={FontSize}
             Place={Place}
+            neonbackground={neonbackground}
+            setneonbackground={setneonbackground}
           />} />
         </Routes>
         <footer className='footer-middle my-auto d-flex flex-container'>

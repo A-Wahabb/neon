@@ -8,11 +8,6 @@ import Fifth from '../Assets/Imgs/Fifth.jpeg'
 import Sixth from '../Assets/Imgs/Sixth.jpeg'
 import Seventh from '../Assets/Imgs/Seventh.jpeg'
 import Eighth from '../Assets/Imgs/Eighth.jpeg'
-// import First from "../../../Images/banner1.jpg"
-// import Banner2 from "../../../Images/banner2.jpg"
-// import Banner3 from "../../../Images/banner3.jpg"
-// import Banner4 from "../../../Images/banner4.jpg"
-// import Banner5 from "../../../Images/banner5.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'

@@ -1,6 +1,5 @@
 import React from 'react'
 import SignDiagramUSA from '../Assets/Imgs/SignDiagramUSA.png'
-import neonbackground1 from '../Assets/Imgs/neonbackground1.png'
 
 function DesignProofPage(props) {
 
@@ -48,7 +47,7 @@ function DesignProofPage(props) {
               borderRadius: '15px',
               margin: '10px',
             }}>
-              <img src={neonbackground1} width={220} />
+              <img src={props.neonbackground} width={220} />
 
             </div>
           </div>
