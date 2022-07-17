@@ -360,8 +360,10 @@ function HomePage(props) {
                 </div>
                 <div className='my-5 container'>
                     <h1 className="tc-pink text-center">Create a Custom Neon® sign in 5 easy steps</h1>
+                    <div className='mx-auto col-md-6'>
+                        <img className='my-2' src={videoImg} style={{ width: '100%' }} alt="" />
+                    </div>
                     <div className='mx-auto text-center my-4'>
-                        <img className='my-2' src={videoImg} style={{ width: '-webkit-fill-available' }} alt="" />
                         <img className='my-2 container' src={OneToFive} alt="" />
                     </div>
                 </div>
