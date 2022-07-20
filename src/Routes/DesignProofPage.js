@@ -13,7 +13,7 @@ function DesignProofPage(props) {
 
 
   const SendWhatsAppMessage = () => {
-    let num = "923314250294"
+    let num = "923229477543"
     let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}%0aHeight: ${props.sizeParams.height} *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.%0a%0a*ContactDetails*%0a${mobNumber}%0a${email}`
 
     let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
