@@ -19,6 +19,11 @@ import iconremote from '../Assets/Imgs/iconremote.png'
 import iconpower from '../Assets/Imgs/iconpower.png'
 import iconstrong from '../Assets/Imgs/iconstrong.png'
 import { Link } from 'react-router-dom'
+import Output from '../atom/Output'
+import InputText from '../atom/InputText'
+import SlctFont from '../atom/SlctFont'
+import SlctRemain from '../atom/SlctRemain'
+import SlctColor from '../atom/SlctColor'
 
 function HomePage(props) {
     return (
@@ -29,9 +34,9 @@ function HomePage(props) {
                 <p className="tc-pink fw-400 fs22 text-center" >Your own creation, handmade from light.</p>
 
                 <div className="row g-3">
-                    <div className="col-md-6 col-lg-4">
-                        <div className="Selection_Box">
-                            <ul className="text-center combineButton RadioToButton px-0 d-flex justify-content-center">
+                    <div className="col-lg-6 col-xl-4">
+                        <div className="Selection_Box py-3">
+                            {/* <ul className="text-center combineButton RadioToButton px-0 d-flex justify-content-center">
                                 <li className="w-50 selected" onClick={(e) => { props.setSelction('TEXT') }}>
                                     <input
                                         type="radio"
@@ -71,284 +76,40 @@ function HomePage(props) {
                                         COLOR
                                     </label>
                                 </li>
-                            </ul>
-                            <div className="px-3 pb-5">
-                                {props.Selction === 'TEXT' && <>
-                                    <div className="mt-3">
-                                        <textarea
-                                            className='inputText w-100 py-3'
-                                            placeholder='ENTER TEXT HERE &#10;Press Enter/Return for a new line'
-                                            name='UserInput'
-                                            onChange={(e) => {
-                                                if (e.key === "Enter") {
-                                                    props.setUserInput(`${e.target.value}\n`);
-                                                }
-                                                props.setUserInput(e.target.value);
-                                            }} />
-
-                                    </div>
-
-                                </>}
-                                {props.Selction === 'FONT' && <>
-                                    <p className="tc-grey fw-bold fs16 text-center">CHOOSE FONT</p>
-
-                                    <div className="row w-100 mx-auto g-2 FontsCollection">
-                                        {props.FontList.map(each => (
-
-                                            <FontSlction
-                                                FontFamily={props.FontFamily}
-                                                name={each}
-                                                setFontFamily={props.setFontFamily} />
-                                        ))}
-                                    </div>
-                                </>
-                                }
-
-                                {props.Selction === 'COLOR' && <>
-                                    <p className="tc-grey fw-bold fs16 text-center">CHOOSE YOUR COLOR</p>
-                                    <div className="d-flex flex-wrap " >
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Warm White'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color10'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='White'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color20'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Lemon Yellow'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color30'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Golden Yellow'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color40'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Orange'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color50'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Light Red'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color60'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Red'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color70'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Pink'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color80'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Cotton Candy'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color90'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Deep Pink'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color100'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Purple'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color110'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Deep Blue'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color120'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Electric Blue'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color130'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Ice Blue'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color140'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Tropical Blue'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color150'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Mint'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color160'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Green'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color170'} />
-                                        </div>
-
-                                        <div className="col-sm-2">
-                                            <ColorSlction
-                                                name='Deep Green'
-                                                Color={props.Color}
-                                                setColor={props.setColor}
-                                                Code={'color180'} />
-                                        </div>
-
-                                    </div>
-                                </>}
-
-                                <Options
-                                    sizeParams={props.sizeParams}
-                                    settingDetails={props.settingDetails}
-                                />
-
-                                <div className="row py-3 m-auto">
-                                    <div className="col-sm-6 p-2">
-
-                                        <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${props.Place == 'Indoor' && 'active'} `} onClick={() => { props.setPlace('Indoor') }}>
-                                            <div>
-                                                <p className="text-center fw-bold fs14 text-black mb-0">Indoor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 p-2">
-
-                                        <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${props.Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { props.setPlace('IP67 Waterproof Technology') }}>
-                                            <div>
-                                                <p className="text-center fw-bold fs14 text-black">IP67 Waterproof Technology*</p>
-                                                <p className="text-center fw-bold fs14 text-black mb-0">+ $68</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {props.Place == 'IP67 Waterproof Technology' ?
-                                        <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
-                                        :
-                                        <p className="text-grey fs11" >Indoor Signs are not suitable for use outdoors or anywhere they might get wet. Inappropriate use will void the warranty.</p>
-                                    }
+                            </ul> */}
+                            <div className="row px-3 pb-5">
+                                <div className="col-12 ps-1">
+                                    <InputText
+                                        oldProps={props} />
                                 </div>
+                                <div className="d-lg-none col-12 mb-5 Output">
 
-                                <PowerAdapt
-                                    Adptr={props.Adptr}
-                                    setAdptr={props.setAdptr}
-                                />
-                                <AcrylicBackground
-                                    AcrylicBkgrnd={props.AcrylicBkgrnd}
-                                    setAcrylicBkgrnd={props.setAcrylicBkgrnd}
-                                />
-                                <SelectBackBoard
-                                    sizeParams={props.sizeParams}
-                                    setsizeParams={props.setsizeParams}
-                                    neonbackground1={props.neonbackground1}
-                                    neonbackground2={props.neonbackground2}
-                                    neonbackground3={props.neonbackground3}
-                                    neonbackground4={props.neonbackground4}
-                                    neonbackground5={props.neonbackground5}
-                                    neonbackground={props.neonbackground}
-                                    setneonbackground={props.setneonbackground}
-                                />
-                                {props.UserInput !== 'Type Here' ?
-                                    <Link to={props.UserInput !== 'Type Here' ? '/design-proof' : '/'}>
-                                        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" className='py-3 addtocart'>
-                                            ADD TO CART
-                                        </button>
-                                    </Link>
-                                    :
-                                    <button className='py-3 addtocart' onClick={() => alert('Please Add Some Text First')}>ADD TO CART</button>
-                                }
+                                    <Output
+                                        oldProps={props}
+                                    />
+
+                                </div>
+                                <div className="col-9 pe-1 pt-lg-0" style={{ paddingTop: '10vw' }} >
+
+                                    <SlctFont
+                                        oldProps={props} />
+
+
+                                </div>
+                                <div className="col-3 pt-lg-0" style={{ paddingTop: '10vw' }} >
+                                    <SlctColor
+                                        oldProps={props} />
+
+                                </div>
                             </div>
+                            <SlctRemain
+                                oldProps={props} />
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-8 Output">
-                        <div className="position-absolute mt-2 ms-0 ms-md-3 ms-lg-5">
-                            <div className="switch">
-                                <input type="checkbox" name="toggle" defaultChecked={props.ShowShadow} onChange={(e) => { props.setShowShadow(e.target.checked) }} />
-                                <label for="toggle">
-                                    <i className="bulb">
-                                        <span className="bulb-center"></span>
-                                        <span className="filament-1"></span>
-                                        <span className="filament-2"></span>
-                                        <span className="reflections">
-                                            <span></span>
-                                        </span>
-                                        <span className="sparks">
-                                            <i className="spark1"></i>
-                                            <i className="spark2"></i>
-                                            <i className="spark3"></i>
-                                            <i className="spark4"></i>
-                                        </span>
-                                    </i>
-                                </label>
-                            </div>
-                        </div>
-                        <div className='w-100 ViewPort_div position-relative'>
-                            <div className="container text-center h-100" style={props.BackGroundWall} >
-                                <Textfit className='viewContainer mx-auto mt-3' mode="multi">
-                                    {props.UserInput ? props.UserInput.split("\n").map((l, i) =>
-                                        <p className={`bg-transparent mb- responsiveText ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} key={i}>{l}</p>
-                                    ) :
-                                        <p className={`bg-transparent mb- responsiveText ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} >Type Here</p>}
-                                </Textfit>
-                            </div>
-                            <BannerSlider setImage={props.setImage} />
-                        </div>
+                    <div className="d-none d-lg-block col-lg-6 col-xl-8 Output">
+                        <Output
+                            oldProps={props}
+                        />
                     </div>
                 </div>
             </div>
@@ -360,10 +121,8 @@ function HomePage(props) {
                 </div>
                 <div className='my-5 container'>
                     <h1 className="tc-pink text-center">Create a Custom Neon® sign in 5 easy steps</h1>
-                    <div className='mx-auto col-md-6'>
-                        <img className='my-2' src={videoImg} style={{ width: '100%' }} alt="" />
-                    </div>
                     <div className='mx-auto text-center my-4'>
+                        <img className='my-2' src={videoImg} style={{ width: '-webkit-fill-available' }} alt="" />
                         <img className='my-2 container' src={OneToFive} alt="" />
                     </div>
                 </div>

@@ -1,15 +1,15 @@
-.color10 {
+.Warm_White {
     color: rgb(255, 253, 207);
     background-color: rgb(255, 253, 207);
 }
 
-.color10.active {
+.Warm_White.active {
     box-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 253, 207) 0px 0px 8px, rgb(255, 253, 207) 0px 0px 12px, rgb(255, 253, 207) 0px 0px 16px, rgb(255, 253, 207) 0px 0px 22px, rgb(255, 253, 207) 0px 0px 30px;
     text-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 253, 207) 0px 0px 8px, rgb(255, 253, 207) 0px 0px 12px, rgb(255, 253, 207) 0px 0px 16px, rgb(255, 253, 207) 0px 0px 22px, rgb(255, 253, 207) 0px 0px 30px;
 }
 
-.color10.text,
-.color20.text,
+.Warm_White.text,
+.White.text,
 .color60.text,
 .color80.text,
 .color110.text,
@@ -20,27 +20,27 @@
     text-shadow: rgb(181 181 181) 0px 1px 0px, rgb(169 169 169) 0px 2px 0px, rgb(148 148 148) 0px 3px 0px, rgb(125 125 125) 0px 4px 0px, rgb(0 0 0 / 23%) 0px 0px 5px, rgb(0 0 0 / 43%) 0px 1px 3px, rgb(0 0 0 / 40%) 1px 4px 6px, rgb(0 0 0 / 38%) 0px 5px 10px, rgb(0 0 0 / 25%) 3px 7px 12px;
 }
 
-.color20 {
+.White {
     color: rgb(225, 227, 230);
     background-color: white;
 }
 
-.color20.active {
+.White.active {
     box-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(225, 227, 230) 0px 0px 8px, rgb(225, 227, 230) 0px 0px 12px, rgb(225, 227, 230) 0px 0px 16px, rgb(225, 227, 230) 0px 0px 22px, rgb(225, 227, 230) 0px 0px 30px;
     text-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, white 0px 0px 8px, white 0px 0px 12px, white 0px 0px 16px, white 0px 0px 22px, white 0px 0px 30px;
 }
 
-.color30 {
+.Lemon_Yellow {
     color: rgb(255, 249, 124);
     background-color: rgb(255, 249, 124);
 }
 
-.color30.active {
+.Lemon_Yellow.active {
     box-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 249, 124) 0px 0px 8px, rgb(255, 249, 124) 0px 0px 12px, rgb(255, 249, 124) 0px 0px 16px, rgb(255, 249, 124) 0px 0px 22px, rgb(255, 249, 124) 0px 0px 30px;
     text-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 249, 124) 0px 0px 8px, rgb(255, 249, 124) 0px 0px 12px, rgb(255, 249, 124) 0px 0px 16px, rgb(255, 249, 124) 0px 0px 22px, rgb(255, 249, 124) 0px 0px 30px;
 }
 
-.color30.text {
+.Lemon_Yellow.text {
     text-shadow: rgb(233 227 106) 0px 1px 0px, rgb(218 212 80) 0px 2px 0px, rgb(199 193 68) 0px 3px 0px, rgb(170 165 53) 0px 4px 0px, rgb(0 0 0 / 23%) 0px 0px 5px, rgb(0 0 0 / 43%) 0px 1px 3px, rgb(0 0 0 / 40%) 1px 4px 6px, rgb(0 0 0 / 38%) 0px 5px 10px, rgb(0 0 0 / 25%) 3px 7px 12px
 }
 
