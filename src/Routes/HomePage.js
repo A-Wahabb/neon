@@ -411,7 +411,7 @@ function HomePage(props) {
                             <p>Create your own neon light using our online neon sign maker. To design your own custom neon word light choose a font, color, and size. Try out as many combinations as you want. You can even view your design on a number of backgrounds to give you a really good idea of how it will look IRL. When you're happy with your custom options just add it to cart. In just a few weeks you'll have a handmade, personalized neon light design. If you can't do what you want with the custom sign tool ask us for a custom quote.</p>
                         </div>
                     </div>
-                    <div className='container text-center'>
+                    <div className='container col-md-10 text-center'>
                         <img src={SignDiagramUSA} style={{ width: 'inherit' }} alt="" />
                     </div>
                 </div>
@@ -482,39 +482,39 @@ function HomePage(props) {
                     <div className='container text-center my-5'>
                         <h1 className='tc-blue fw-bold my-5'>FAQ</h1>
                         <div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingOne">
-                                        <button class="accordion-button  bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingOne">
+                                        <button className="accordion-button  bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             How Much Does a Custom Neon® Sign Cost?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body">
                                             The price for custom LED neon signs start at $112 for a sign with two letters. Our handmade LED neon signs, lamps and wall decor are affordable and we are very competitive on price! In addition to great prices, our experienced team also offers unparalleled customer support, from the design stage through to delivery and aftercare.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingTwo">
-                                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingTwo">
+                                        <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             Our Design Service
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body text-start">
+                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body text-start">
                                             We are happy to offer a free design service to our customers, providing one or more designs for your approval, at no extra charge. If you have a change of mind and wish to amend or cancel your order before the sign goes into production we will happily offer a partial or full refund. Once a custom sign order is approved and has gone into production we are no longer able to offer a refund. Please note that a custom sign is automatically approved if "YES" is selected when ordering.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingThree">
-                                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingThree">
+                                        <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             Why Buy a Neon Light Sign from Custom Neon®?
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body text-start">
+                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body text-start">
                                             <p>All of our LED neon light signs are handmade from LED neon light tubes that are kid-safe and both economical and ecologically friendly! Some great reasons to choose a custom LED sign from us are:</p>
                                             <ul>
                                                 <li>Affordable - We keep our prices as low as possible while offering a high quality product.</li>
@@ -530,39 +530,39 @@ function HomePage(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingfour">
-                                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingfour">
+                                        <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
                                             What Neon Light Colors Can I Choose?
                                         </button>
                                     </h2>
-                                    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body text-start">
+                                    <div id="collapsefour" className="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body text-start">
                                             We have a total of 18 colors to choose from. Eight of these are white when the sign is turned off and colored when the sign is switched on. The remaining ten colors come with a colored tube, so the sign shows its color even when it's turned off.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingfive">
-                                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingfive">
+                                        <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
                                             How Big Can My Custom-made Neon Be?
                                         </button>
                                     </h2>
-                                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body text-start">
+                                    <div id="collapsefive" className="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body text-start">
                                             <p>Our LED Neon is available in 8/9/10mm thickness, and the minimum letter height is approximately 3-4 inches for simple/non-cursive fonts and 4-5 inches for cursive fonts.</p>
                                             <p>If your custom order is for a sign larger than 7ft 8in by 3ft 11in it will be made on two or more backboards that can be easily arranged together. Doing this keeps the signs safer during shipping and allows us to deliver the best possible price for you.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item bg-transparent">
-                                    <h2 class="accordion-header fw-bold" id="headingsix">
-                                        <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                <div className="accordion-item bg-transparent">
+                                    <h2 className="accordion-header fw-bold" id="headingsix">
+                                        <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
                                             What are the Backboard Options?
                                         </button>
                                     </h2>
-                                    <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body text-start">
+                                    <div id="collapsesix" className="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+                                        <div className="accordion-body text-start">
                                             <p>Custom Neon signs are mounted on a clear, acrylic backboard. We offer two standard backing options at no extra cost.</p>
                                             <ul>
                                                 <li>For script/cursive fonts - we recommend the cut around / contoured acrylic backing.</li>

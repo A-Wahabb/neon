@@ -13,7 +13,7 @@ function SelectBackBoard(props) {
                 margin: '10px',
             }}>
                 <img src={props.neonbackground} width={171} />
-                <select onChange={(e) => { props.setneonbackground(e.target.value) }} class="form-control form-control-sm my-2"
+                <select onChange={(e) => { props.setneonbackground(e.target.value) }} className="form-control form-control-sm my-2"
                     style={{
                         background: '#f5f5f5', padding: '0 10px ',
                     }}>
