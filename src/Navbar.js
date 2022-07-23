@@ -5,13 +5,16 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
-                <div className='d-block d-lg-none'>
+                {/* <div className='d-block d-lg-none'>
+                    <img src={logo} width='100' alt="LOGO" />
+                </div> */}
+                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button> */}
+                <div className='mx-auto'>
                     <img src={logo} width='100' alt="LOGO" />
                 </div>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarText">
+                {/* <div className="collapse navbar-collapse" id="navbarText">
                     <div className="d-md-flex justify-content-between">
                         <div className="px-3">
                             <p className="fs22 fw-bold text-black mb-0" href="#">HOME</p>
@@ -35,7 +38,7 @@ function Navbar() {
                             <p className="fs22 fw-bold text-black mb-0" href="#">SHOP</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </nav>
     )

@@ -524,3 +524,8 @@ textarea::placeholder {
 .ArabicDir{
   direction: rtl !important;
 }
+
+.responsiveText{
+  line-height: initial;
+  margin-top: 50px;
+}

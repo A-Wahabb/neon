@@ -22,7 +22,7 @@ function Footer() {
                     Privacy
                 </div>
                 <div className='col-6 col-md-4 text-white'>
-                    info@customneon.com
+                    info@neonclub.com
                 </div>
                 <div className='col-6 col-md-4 text-white'>
                     Advanced search
