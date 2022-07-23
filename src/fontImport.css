@@ -171,3 +171,63 @@
     font-family: "NewCursive";
     src: url("/src/Assets/Fonts/NewCursive/NewCursive-regular.ttf");
 }
+
+@font-face {
+    font-family: 'Kufi';
+    src: url("/src/Assets/Fonts/DroidKufiArabic/DroidKufi-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Sabana';
+    src: url("/src/Assets/Fonts/SabanaArabic/Sabana.ttf");
+}
+
+@font-face {
+    font-family: 'Kahlil';
+    src: url("/src/Assets/Fonts/kahlilArabic/Kahlil.otf");
+}
+
+@font-face {
+    font-family: 'Mustopha';
+    src: url("/src/Assets/Fonts/mustophaArabic/MustophaRegular-eZ3gm.ttf");
+}
+
+@font-face {
+    font-family: 'Khodijah';
+    src: url("/src/Assets/Fonts/khodijahArabic/Khodijah\ Free.ttf");
+}
+
+@font-face {
+    font-family: 'Assyam';
+    src: url("/src/Assets/Fonts/assyamArabic/Assyam.ttf");
+}
+
+@font-face {
+    font-family: 'Samiruk';
+    src: url("/src/Assets/Fonts/samirukArabic/samiruk.ttf");
+}
+
+@font-face {
+    font-family: 'felicitationArabic2';
+    src: url("/src/Assets/Fonts/felicitationArabic2/Felicitation\ Arabic_Ramadan.ttf");
+}
+
+@font-face {
+    font-family: 'magicArabic';
+    src: url("/src/Assets/Fonts/magicArabic/Arabic\ Magic.ttf");
+}
+
+@font-face {
+    font-family: 'rakhisaArabic';
+    src: url("/src/Assets/Fonts/rakhisaArabic/Rakhisa.ttf");
+}
+
+@font-face {
+    font-family: 'tharwatArabic';
+    src: url("/src/Assets/Fonts/tharwatArabic/Tharwat.ttf");
+}
+
+@font-face {
+    font-family: 'zanzabarArabic';
+    src: url("/src/Assets/Fonts/zanzabarArabic/Zanzabar\ D.otf");
+}

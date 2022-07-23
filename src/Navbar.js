@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../src/Assets/Imgs/neon_logo.png'
+import logo from '../src/Assets/Imgs/NeonClub.png'
 
 function Navbar() {
     return (

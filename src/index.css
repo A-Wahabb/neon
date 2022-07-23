@@ -520,3 +520,7 @@ textarea::placeholder {
   background-image: url('./Assets//Imgs/neonbackground1.png') !important;
   width: 171px;
 }
+
+.ArabicDir{
+  direction: rtl !important;
+}

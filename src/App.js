@@ -36,6 +36,22 @@ function App() {
   const [Place, setPlace] = useState('Indoor')
   const [Adptr, setAdptr] = useState('')
   const [AcrylicBkgrnd, setAcrylicBkgrnd] = useState('')
+  const [isArabic, setisArabic] = useState(false)
+  const [FontListArabic, setFontListArabic] = useState([
+    'Kufi',
+    'Sabana',
+    'Kahlil',
+    'Mustopha',
+    'Khodijah',
+    'Assyam',
+    'Samiruk',
+    'magicArabic',
+    'felicitationArabi2',
+    'rakhisaArabic',
+    'tharwatArabic',
+    'zanzabarArabic',
+  ])
+
   const [FontList, setFontList] = useState([
     'Alexa',
     'Barcelona',
@@ -80,6 +96,11 @@ function App() {
   //   function closeModal() {
   //     setIsOpen(false);
   // }
+
+
+  const onArabic = () => {
+    setisArabic(!isArabic)
+  }
 
   const neonbackgroundStyle = {
     backgroundImage: neonbackground
@@ -131,6 +152,9 @@ function App() {
             setSelction={setSelction}
             setUserInput={setUserInput}
             FontList={FontList}
+            FontListArabic={FontListArabic}
+            isArabic={isArabic}
+            onArabic={onArabic}
             FontFamily={FontFamily}
             setFontFamily={setFontFamily}
             setColor={setColor}
