@@ -5,7 +5,7 @@ const SlctColor = ({ oldProps }) => {
         <>
 
             <p className="tc-grey fw-bold fs16 text-center">COLOR</p>
-            <div className="d-flex flex-wrap " >
+            <div className="row flex-wrap " >
 
                 <div className="col-sm-6">
                     <ColorSlction

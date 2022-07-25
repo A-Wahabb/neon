@@ -79,7 +79,7 @@ function DesignProofPage(props) {
               <li>{props.UserInput}</li>
               <li>{props.Color}</li>
               <li>{props.FontFamily}</li>
-              {props.place == 'IP67 Waterproof Technology' ?
+              {props.Place == 'IP67 Waterproof Technology' ?
                 <li>IP67 Waterproof Technology</li>
                 :
                 <li>Material: High-quality LED neon flex - Indoor use</li>
