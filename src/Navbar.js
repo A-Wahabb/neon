@@ -11,8 +11,9 @@ function Navbar() {
                 {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button> */}
-                <div className='mx-auto'>
-                    <img src={logo} width='100' alt="LOGO" />
+                <div className='mx-auto ms-lg-0 d-inline-flex'>
+                    <img src={logo} width='100' alt="LOGO" className="mx-auto d-block" />
+                    <p className="tc-blue fw-bold fs30 align-self-center mb-0">NeonClub.pk</p>
                 </div>
                 {/* <div className="collapse navbar-collapse" id="navbarText">
                     <div className="d-md-flex justify-content-between">

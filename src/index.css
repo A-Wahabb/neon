@@ -99,6 +99,7 @@ body {
 .fs90 {
   font-size: 90px !important
 }
+
 .fs30 {
   font-size: 30px
 }
@@ -469,11 +470,11 @@ textarea::placeholder {
 .shadow_ {
   width: 60px;
   height: 60px;
-  background-color: #ff7ac7;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 60px;
+  z-index: 9999;
 }
 
 /* box-shadow: 0px 6px 23px -2px rgb(0 0 0 / 27%);
@@ -521,11 +522,11 @@ textarea::placeholder {
   width: 171px;
 }
 
-.ArabicDir{
+.ArabicDir {
   direction: rtl !important;
 }
 
-.responsiveText{
+.responsiveText {
   line-height: initial;
   margin-top: 50px;
 }
