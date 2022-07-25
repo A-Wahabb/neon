@@ -27,9 +27,9 @@ function App() {
   const [sizeParams, setsizeParams] = useState(
     {
       size: "Small",
-      price: "110",
-      length: "10",
-      height: "",
+      price: "2500",
+      length: "1",
+      height: "1",
     }
   )
   const [neonbackground, setneonbackground] = useState(neonbackground1)
@@ -88,7 +88,7 @@ function App() {
     'NewCursive',
   ])
 
-  const [Price, setPrice] = useState(0)
+  const [Price, setPrice] = useState(2500)
   //   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   //   function openModal() {
@@ -183,6 +183,7 @@ function App() {
             Price={Price}
           />} />
           <Route path="/design-proof" element={<DesignProofPage
+            Adptr={Adptr}
             AcrylicBkgrnd={AcrylicBkgrnd}
             sizeParams={sizeParams}
             Color={Color}

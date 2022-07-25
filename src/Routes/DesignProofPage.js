@@ -13,8 +13,9 @@ function DesignProofPage(props) {
 
 
   const SendWhatsAppMessage = () => {
-    let num = "923229477543"
-    let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}%0aHeight: ${props.sizeParams.height} *%0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.%0a%0a*ContactDetails*%0a${mobNumber}%0a${email}`
+    // let num = "923229477543"
+    let num = "923314250294"
+    let message = `*Sign*%0a%0a${props.UserInput.replaceAll('\n', '%0a')}%0aColor:${props.Color}%0aFont: ${props.FontFamily}%0aMaterial: ${props.Place}%0a%0a%0a*Dimension*%0a%0aLength: ${props.sizeParams.length}%0aHeight: ${props.sizeParams.height} %0a%0a%0a*BACKBOARD*%0a%0aBackboard color: ${props.AcrylicBkgrnd}%0aCut Around Acrylic: Ready to hang or wall mount.%0a%0a*ContactDetails*%0amobile Num:${mobNumber}%0aEmail:${email} %0a%0aPrice:PKR ${props.Price}`
 
     let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     let url = ""
@@ -61,12 +62,12 @@ function DesignProofPage(props) {
         <h3 className=''>PLEASE CHECK AND CONFIRM YOUR DESIGN</h3>
         <div className='col-md-4 mx-auto py-3'>
           <div className='divSize'>
-              <Textfit className='fs90' mode="multi">
-                {props.UserInput ? props.UserInput.split("\n").map((l, i) =>
-                  <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} key={i}>{l}</p>
-                ) :
-                  <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} >Type Here</p>}
-              </Textfit>
+            <Textfit className='fs90' mode="multi">
+              {props.UserInput ? props.UserInput.split("\n").map((l, i) =>
+                <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} key={i}>{l}</p>
+              ) :
+                <p className={`bg-transparent design_proof ${props.Color} ${props.ShowShadow ? 'text-white active' : 'text'}`} style={props.mystyle} >Type Here</p>}
+            </Textfit>
           </div>
         </div>
       </div>
@@ -88,10 +89,11 @@ function DesignProofPage(props) {
           <div className='my-3'>
             <h3 className="text-center tc-blue my-3">DIMENSIONS</h3>
             <ul>
-              <li>Length:{props.sizeParams.length}"</li>
-              <li>Height:{props.sizeParams.height}" *</li>
+              <li>Length:{props.sizeParams.length}ft</li>
+              <li>Height:{props.sizeParams.height}ft</li>
               <li>*The sign will be custom made and size may vary slightly.</li>
               <li>The backboard adds a margin of about 0.8" around the text.</li>
+              <li>Backboard color: {props.AcrylicBkgrnd}</li>
             </ul>
           </div>
           <div className='my-3'>
@@ -110,7 +112,7 @@ function DesignProofPage(props) {
           <h3 className='text-center tc-blue'>WHAT'S IN THE BOX?</h3>
           <img src={SignDiagramUSA} width='100%' />
           <div className='my-4 w-75'>
-            <p>Electrical Plug: USA / Canada</p>
+            <p>Electrical Plug: {props?.Adptr?.label}</p>
             <p>Some signs may require multiple power cords, which will be provided if necessary.</p>
             <div className="form-check">
               <input className="form-check-input fs-5" type="radio" name="mountingType" id="mountingType1" />
@@ -130,6 +132,9 @@ function DesignProofPage(props) {
               <label className="form-check-label fs-5 fw-600" for="mountingType2">
                 Sign Hanging Kit
               </label>
+            </div>
+            <div className="">
+              <p className="text-black fw-bold fs22 mt-5">Total with selected options: PKR {props.Price}</p>
             </div>
           </div>
         </div>
@@ -152,7 +157,7 @@ function DesignProofPage(props) {
               <input className="form-check-input fs-5" type="radio" name="AcceptConditions" id="AcceptConditions3" checked />
               <label className="form-check-label fs-5 fw-600" for="AcceptConditions3">
                 <p>
-                  <span className='fw-bold tc-pink'>NO</span>
+                  <span className='fw-bold tc-pink'>NO </span>
                   I need further assistance. The turnaround time will not start yet.  Custom Neon will email you to finalize details (please check junk folder). If we don't hear back within 14 days, we will start manufacturing your order so you receive it in a timely manner.
                 </p>
               </label>

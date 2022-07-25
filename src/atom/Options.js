@@ -59,7 +59,7 @@ const Options = (props) => {
                 </div>
                 <div className="col-sm-6">
                     <OptionEach
-                        size="supersized"
+                        size="Supersized"
                         price="12000"
                         length="2"
                         height="3"
