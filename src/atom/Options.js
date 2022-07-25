@@ -8,9 +8,9 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="Small"
-                        price="110"
-                        length="10"
-                        height=""
+                        price="2500"
+                        length="1"
+                        height="1"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />
@@ -19,9 +19,9 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="Medium"
-                        price="130"
-                        length="15"
-                        height=""
+                        price="4000"
+                        length="1"
+                        height="2"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />
@@ -30,9 +30,9 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="Large"
-                        price="150"
-                        length="20"
-                        height=""
+                        price="6000"
+                        length="1"
+                        height="3"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />
@@ -40,9 +40,9 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="X Large"
-                        price="180"
-                        length="25"
-                        height=""
+                        price="8000"
+                        length="1"
+                        height="4"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />
@@ -50,9 +50,9 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="XX Large"
-                        price="200"
-                        length="30"
-                        height=""
+                        price="8000"
+                        length="2"
+                        height="2"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />
@@ -60,9 +60,19 @@ const Options = (props) => {
                 <div className="col-sm-6">
                     <OptionEach
                         size="supersized"
-                        price="250"
-                        length="35"
-                        height=""
+                        price="12000"
+                        length="2"
+                        height="3"
+                        sizeParams={props.sizeParams}
+                        settingDetails={props.settingDetails}
+                    />
+                </div>
+                <div className="col-sm-6">
+                    <OptionEach
+                        size="X Supersized"
+                        price="16000"
+                        length="2"
+                        height="4"
                         sizeParams={props.sizeParams}
                         settingDetails={props.settingDetails}
                     />

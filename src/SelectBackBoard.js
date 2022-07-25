@@ -29,7 +29,7 @@ function SelectBackBoard(props) {
 
             <div className='total-section d-inline-flex w-100 p-3'>
                 <p className='mb-0 mt-2 fs-14'>Total with selected options:</p>
-                <p className='fs22 ms-auto mb-1'>{props.sizeParams.price}</p>
+                <p className='fs22 ms-auto mb-1'>PKR {props.Price}</p>
             </div>
         </>
     )

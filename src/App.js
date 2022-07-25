@@ -132,6 +132,7 @@ function App() {
       length: c,
       height: d
     })
+    setPrice(b)
   }
 
   // window.fitText(document.getElementById("responsiveText"),3);
@@ -180,7 +181,6 @@ function App() {
             neonbackground4={neonbackground4}
             neonbackground5={neonbackground5}
             Price={Price}
-            setPrice={setPrice}
           />} />
           <Route path="/design-proof" element={<DesignProofPage
             AcrylicBkgrnd={AcrylicBkgrnd}
@@ -195,7 +195,6 @@ function App() {
             neonbackground={neonbackground}
             setneonbackground={setneonbackground}
             Price={Price}
-            setPrice={setPrice}
           />} />
         </Routes>
         <Footer />

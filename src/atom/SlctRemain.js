@@ -68,6 +68,7 @@ const SlctRemain = ({ oldProps }) => {
                     neonbackground5={oldProps.neonbackground5}
                     neonbackground={oldProps.neonbackground}
                     setneonbackground={oldProps.setneonbackground}
+                    Price={oldProps.Price}
                 />
                 <Link to={oldProps.UserInput !== 'Type Here' ? '/design-proof' : '/'} >
                     <button className='py-3 addtocart'>ADD TO CART</button>
