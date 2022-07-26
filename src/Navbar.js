@@ -12,7 +12,7 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button> */}
                 <div className='mx-auto ms-lg-0 d-inline-flex'>
-                    <img src={logo} width='100' alt="LOGO" className="mx-auto d-block" />
+                    <img src={logo} width='100' alt="LOGO" className="mx-auto d-block" style={{ borderRadius: '25px' }} />
                     <p className="tc-blue fw-bold fs30 align-self-center mb-0">NeonClub.pk</p>
                 </div>
                 {/* <div className="collapse navbar-collapse" id="navbarText">
