@@ -133,7 +133,7 @@ function HomePage(props) {
                     </div>
                 </div>
                 <div className='my-5 container'>
-                    <h1 className="tc-pink text-center">Create a Custom Neon® sign in 5 easy steps</h1>
+                    <h1 className="tc-pink text-center">Create a Neon Club® sign in 5 easy steps</h1>
                     <div className='mx-auto text-center my-4'>
                         <img className='my-2' src={videoImg} style={{ width: '-webkit-fill-available' }} alt="" />
                         <img className='my-2 container' src={OneToFive} alt="" />
@@ -161,7 +161,7 @@ function HomePage(props) {
                             </p>
                         </div>
                         <div className='col-md-6'>
-                            <h3 className="w-75 tc-blue">Custom Neon® Light Design</h3>
+                            <h3 className="w-75 tc-blue">Neon Club® Light Design</h3>
                             <span className="w-75 tc-grey fs-3"></span>
                             <p>We specialize in custom LED neon signs, personalized neon signs, neon signs for weddings, business and restaurant neon signs, custom neon sidewalk signs, bar signs, and aesthetic neon artwork for custom home décor. Our custom neon installations light up homes, offices, stores, bars, cafes, shopping malls, weddings, parties and events around the world.</p>
                             <p>Costing less than the price of real glass neon signs, LED neon signs are easily portable, durable, and safe. Best of all, LED neons can be designed in a wide range of colors and fonts, making it easy to design unique, customized and personalized neon signs. Whether you're after a modern or replica vintage neon sign we've got you covered!</p>
@@ -258,12 +258,12 @@ function HomePage(props) {
                                 <div className="accordion-item bg-transparent">
                                     <h2 className="accordion-header fw-bold" id="headingOne">
                                         <button className="accordion-button  bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            How Much Does a Custom Neon® Sign Cost?
+                                            How Much Does a Neon Club® Sign Cost?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            The price for custom LED neon signs start at $112 for a sign with two letters. Our handmade LED neon signs, lamps and wall decor are affordable and we are very competitive on price! In addition to great prices, our experienced team also offers unparalleled customer support, from the design stage through to delivery and aftercare.
+                                            The price for custom LED neon signs start at Rs 2500 for a sign with two letters. Our handmade LED neon signs, lamps and wall decor are affordable and we are very competitive on price! In addition to great prices, our experienced team also offers unparalleled customer support, from the design stage through to delivery and aftercare.
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@ function HomePage(props) {
                                 <div className="accordion-item bg-transparent">
                                     <h2 className="accordion-header fw-bold" id="headingThree">
                                         <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Why Buy a Neon Light Sign from Custom Neon®?
+                                            Why Buy a Neon Light Sign from Neon Club®?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
