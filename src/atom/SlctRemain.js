@@ -37,12 +37,11 @@ const SlctRemain = ({ oldProps, moveLink }) => {
                         <div className={`h-100 align-items-center d-flex justify-content-center p-2 cursorPointer size_box ${oldProps.Place == 'IP67 Waterproof Technology' && 'active'} `} onClick={() => { oldProps.setPlace('IP67 Waterproof Technology') }}>
                             <div>
                                 <p className="text-center fw-bold fs14 text-black">IP67 Waterproof Technology*</p>
-                                <p className="text-center fw-bold fs14 text-black mb-0">+ $68</p>
                             </div>
                         </div>
                     </div>
                     {oldProps.Place == 'IP67 Waterproof Technology' ?
-                        <p className="text-grey fs11" >*Custom Neon® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
+                        <p className="text-grey fs11" >*Neon Club® now offers a range of IP67 Waterproof rated Outdoor Signs. These can be made in the same range of colors as our indoor signs, and offer an ideal solution for outdoor use. See Photos</p>
                         :
                         <p className="text-grey fs11" >Indoor Signs are not suitable for use outdoors or anywhere they might get wet. Inappropriate use will void the warranty.</p>
                     }
