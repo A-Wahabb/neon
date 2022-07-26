@@ -115,6 +115,7 @@ function HomePage(props) {
                                 </div>
                             </div>
                             <SlctRemain
+                                moveLink={moveLink}
                                 oldProps={props} />
                         </div>
                     </div>

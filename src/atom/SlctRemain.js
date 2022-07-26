@@ -4,7 +4,7 @@ import Options from "./Options";
 import PowerAdapt from "./PowerAdapt";
 import { Link } from 'react-router-dom'
 
-const SlctRemain = ({ oldProps }) => {
+const SlctRemain = ({ oldProps, moveLink }) => {
     return (
         <>
             <div className=" px-3 pb-5">
@@ -70,9 +70,9 @@ const SlctRemain = ({ oldProps }) => {
                     setneonbackground={oldProps.setneonbackground}
                     Price={oldProps.Price}
                 />
-                <Link to={oldProps.UserInput !== 'Type Here' ? '/design-proof' : '/'} >
-                    <button className='py-3 addtocart'>ADD TO CART</button>
-                </Link>
+                {/* <Link to={oldProps.UserInput !== 'Type Here' ? '/design-proof' : '/'} > */}
+                <button onClick={moveLink} className='py-3 mt-3 addtocart'>ADD TO CART</button>
+                {/* </Link> */}
             </div>
         </>
     );

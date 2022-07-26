@@ -29,11 +29,11 @@ const Output = ({ oldProps }) => {
             </div>
             <div className='w-100 ViewPort_div position-relative'>
                 <div className="container text-center h-100" style={oldProps.BackGroundWall} >
-                    <Textfit className='viewContainer mx-auto mt-3' mode="multi">
+                    <Textfit className='viewContainer mx-auto' mode="multi" style={{ marginTop: '14%' }} >
                         {oldProps.UserInput ? oldProps.UserInput.split("\n").map((l, i) =>
-                            <p className={`bg-transparent mb- responsiveText ${oldProps.isArabic? 'ArabicDir' : null} ${oldProps.Color} ${oldProps.ShowShadow ? 'text-white active' : 'text'}`} style={oldProps.mystyle} key={i}>{l}</p>
+                            <p className={`bg-transparent mb- responsiveText ${oldProps.isArabic ? 'ArabicDir' : null} ${oldProps.Color} ${oldProps.ShowShadow ? 'text-white active' : 'text'}`} style={oldProps.mystyle} key={i}>{l}</p>
                         ) :
-                            <p className={`bg-transparent mb- responsiveText ${oldProps.isArabic? 'ArabicDir' : null} ${oldProps.Color} ${oldProps.ShowShadow ? 'text-white active' : 'text'}`} style={oldProps.mystyle} >Type Here</p>}
+                            <p className={`bg-transparent mb- responsiveText ${oldProps.isArabic ? 'ArabicDir' : null} ${oldProps.Color} ${oldProps.ShowShadow ? 'text-white active' : 'text'}`} style={oldProps.mystyle} >Type Here</p>}
                     </Textfit>
 
                 </div>
