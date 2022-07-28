@@ -8,6 +8,11 @@
     text-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 4px, rgb(255, 253, 207) 0px 0px 8px, rgb(255, 253, 207) 0px 0px 12px, rgb(255, 253, 207) 0px 0px 16px, rgb(255, 253, 207) 0px 0px 22px, rgb(255, 253, 207) 0px 0px 30px;
 }
 
+.White.text {
+
+    color: rgb(244, 244, 244);
+}
+
 .Warm_White.text,
 .White.text,
 .color60.text,
@@ -16,7 +21,6 @@
 .color130.text,
 .color140.text,
 .color170.text {
-    color: rgb(244, 244, 244) !important;
     text-shadow: rgb(181 181 181) 0px 1px 0px, rgb(169 169 169) 0px 2px 0px, rgb(148 148 148) 0px 3px 0px, rgb(125 125 125) 0px 4px 0px, rgb(0 0 0 / 23%) 0px 0px 5px, rgb(0 0 0 / 43%) 0px 1px 3px, rgb(0 0 0 / 40%) 1px 4px 6px, rgb(0 0 0 / 38%) 0px 5px 10px, rgb(0 0 0 / 25%) 3px 7px 12px;
 }
 

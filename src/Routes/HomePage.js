@@ -24,6 +24,7 @@ import InputText from '../atom/InputText'
 import SlctFont from '../atom/SlctFont'
 import SlctRemain from '../atom/SlctRemain'
 import SlctColor from '../atom/SlctColor'
+import Swal from 'sweetalert2'
 
 function HomePage(props) {
 
@@ -31,7 +32,12 @@ function HomePage(props) {
 
 
     const moveLink = (e) => {
-        props.UserInput !== 'Type Here' ? history('/design-proof') : alert('Please enter Detail')
+        props.UserInput !== 'Type Here' ? history('/design-proof') : Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Kindly Insert Data!',
+            // footer: '<a href="">Why do I have this issue?</a>'
+        })
     }
 
 
